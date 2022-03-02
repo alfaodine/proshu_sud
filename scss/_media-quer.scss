@@ -1,0 +1,207 @@
+@media (max-width: 1170px){
+    .button {
+        padding: 1em 1em;
+    }
+ 
+    .header, .about-us, .our-services, .price, .pros, .stats, .reviews, .faq{
+        padding: 0 10px;
+    }
+    .consultation{
+        padding: 3em 10px 6em;
+    }
+    .footer{
+        padding: 4em 10px;
+    }
+    .price, .pros{
+        align-items: center;
+    }
+
+}
+@media (max-width: 992px){
+    .header{
+        & h1{
+            font-size: 34px;
+        }
+        & .logo-icon {
+            width: 12.6em;
+            height: 3.7em;
+        }
+        &__top{
+            font-size: 14px;
+        }
+        &__top{
+            font-size: 14px;
+        }
+        &__personal-area a {
+            margin-left: 2px;
+        }
+        &__ceo-info {
+            width: 39%;
+            bottom: 100px;
+        }
+        &__description {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 73%;
+        }
+        &__main{
+            justify-content: flex-end;
+        }
+        &__text{
+            width: 60%;
+        }
+        &__photo img {
+            height: 95vh;
+        }
+    }
+    .about-us{
+        &__video{
+            flex-grow: 1;
+        }
+        &__video iframe {
+            width: 100%;
+        }
+        &__description,__video{
+            width: 50%;
+        }
+    }
+    .pros{
+        &__img{
+            display: none;
+        }
+        &__description{
+            flex-grow: 1;
+            width: 100%;
+            margin: 3em 2em;
+        }
+        &__title{
+            text-align: center;
+        }
+        &>p{
+            text-align: center;
+        }
+        &__card{
+            margin: 0 10%;
+        }
+    }
+    .stats__title {
+        font-size: 33px;
+        & span {
+            font-size: 22px;
+            line-height: 0;
+        }
+    }
+     
+    .our-services__list{
+        justify-content: space-around;
+    }
+    .service-card{
+        width: 330px;
+    }
+    .consultation__form form label {
+    margin: 0px 3% 15px 9%;
+}
+}
+@media (max-width: 768px){
+    // ----------------menu---------
+    .nav-toggle{
+        display: block;
+    }
+    .header__menu{
+        left: -105%;        
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        text-align: center;
+        width: 100vw;
+        top: 5vh;
+        left: -110%;
+        transition: left 0.3s;
+    }
+    .header__menu li:not(:last-child) {
+        padding-right: 0; 
+    }
+    .header__personal-area{
+        position: absolute;
+        width: 100vw;
+        text-align: center;
+        top: 15vh;
+        left: -110%;
+        transition: left 0.3s;
+    }
+    // ----------------end of menu---------
+    .about-us{
+        flex-direction: column-reverse;
+        &__description{
+            width: 100%;
+        }
+        &__video{
+            width: 100%;
+            & iframe{
+                width: 90%;
+                margin: 0 5%;
+            }
+        }
+    }
+    .price{
+        &__img{
+            display: none;
+        }
+        &__description{
+            flex-grow: 1;
+            padding: 0 5% 0 5%;
+        }
+    }
+    .stats{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        &__block{
+            width: 45%;
+        }
+    }
+    .faq{
+        flex-direction: column;
+        &__photo{
+            width: 100%;
+        }
+        &__questions{
+            width: 100%;
+            margin-top: 40px;
+        }
+    }
+    .consultation{
+        flex-direction: column;
+        &__info{
+            width: 100%;
+            margin-left: 5%;
+        }
+        &__form{
+            width: 100%;
+            &>form>label{
+                margin: 0px 3% 15px 5%;
+            }
+            & button{
+                margin: 1em 0 0 5%;
+            }
+        }
+    }
+}
+@media (max-width: 576px){
+
+    .service-card-pros{
+        width: 100%;
+    }
+    .footer{
+        flex-direction: column;
+        text-align: center;
+        &__logo>p:last-of-type{
+            display: none;
+        }
+        &___rights-mobile{
+            display: none;
+            margin-top: 30px;
+        }
+    }
+    
+}

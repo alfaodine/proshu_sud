@@ -1,0 +1,625 @@
+@import "mixins";
+@import "vars";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    @include font_style (Open Sans, 16px, 400, 24px);
+    overflow-x: hidden;
+}
+
+// --------- burger menu ----------
+
+.nav-toggle {
+    display: none;
+    position: relative;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid transparent;
+  }
+  .nav-toggle:focus {
+    outline-width: 0;
+  }
+  .nav-toggle span {
+    background: rgb(0, 0, 0);
+    display: block;
+    transform: rotate(0deg);
+    transition: .2s ease all;
+    border-radius: 8px;
+    height: 6px;
+    width: 60px;
+    margin-bottom: 10px;
+  }
+  .nav-toggle .bar-bot {
+    margin-bottom: 0;
+  }
+  .opened .bar-top {
+            transform: rotate(45deg);
+            transform-origin: 10% 0%;
+  }
+  .opened .bar-mid {
+    opacity: 0;
+  }
+  .opened .bar-bot {
+            transform: rotate(-45deg);
+            transform-origin: 10% 80%;
+  }
+.header{
+    position: relative;
+    height: 100vh;
+    padding: 0 calc(50vw - 585px);
+    background: url(../img/bg-figure1x.png);
+    overflow: hidden;
+ 
+    // background-size: cover, cover;
+    // background-origin: border-box, border-box;
+    background-repeat: no-repeat, no-repeat;
+    // background-size: 100vh, 100vh;
+    background-position: 47vw -4vh, 25% 25%;
+    // background-position-y: 7%, 23%;
+    // background-position-x: -38%, -103%;
+    &__top{
+        @include flex_content (space-between, center);
+        position: relative;
+        z-index: 1;
+        font-weight: 700;
+    }
+    & .logo-icon{
+        width: 15.6em;
+        height: 3.7em;
+    }
+    a{
+        text-decoration: none;
+        color: $color_black;
+        position: relative;
+        display: inline-block;
+    }
+    
+    & a:hover::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+    
+        /* Adjust height and bottom values to work with selected font */
+        height: .07em;
+        bottom: .1em;
+    
+        background-image: linear-gradient(
+            to right,
+            transparent 0%,
+            $color_black 30%,
+            $color_black 50%,
+            $color_black 70%,
+            transparent 100%
+        );
+    
+        /* Set-up fade-in animation */
+        opacity: 0;
+        animation: fadeIn 600ms ease-out forwards;
+    }
+
+    @keyframes fadeIn{
+        100%{
+            opacity: 1;
+        }
+    }
+
+    &__menu{
+        display: block;
+        list-style: none;
+            & li{
+                display: inline-block;                
+            }
+            & li:not(:last-child){
+                padding-right: 3.5em;
+            }
+        }
+        &__personal-area{
+            & svg{
+                height: 1.2em;
+                width: 1.3em;
+            }
+            & a{
+                margin-left: 1em; 
+            }
+        }
+
+        &__description{
+            height: 100vh;
+        }
+        &__bg{
+            position: absolute;
+            top: -14vh;
+            left: 47%;
+            background: linear-gradient(158.74deg, #E3E9FB 33.12%, #9DAACB 63.6%);
+            border-radius: 50px;
+            height: 200vh;
+            width: 200vh;
+            transform: rotate(315deg);
+
+            // position: absolute;
+            // top: 23vh;
+            // left: 47%;
+            // background: url(../img/svg/bg-for-photo.svg) no-repeat;
+            // background: linear-gradient(158.74deg, #E3E9FB 33.12%, #9DAACB 63.6%);
+            // border-radius: 50px;
+            // background-size: 100vh;
+            // height: 123vh;
+            // width: 52vw;
+            // transform: scale(1.7);
+            // position: absolute;
+            // top: -250px;
+            // left: 20%;
+            // background: url(../img/svg/bg-for-photo.svg) no-repeat;
+            // background-size: 170vh;
+            // height: 141vh;
+            // width: 85vw;
+        }
+        &__main{
+            @include flex_content (space-between, flex-end);
+            position: relative;
+            z-index: 1;
+        }
+        &__description{
+            width: 50%;
+        }
+        &__photo{
+            width: 50%;
+            position: relative;
+            & img{
+                height: 90vh;
+            }
+        }
+        &__text{
+            width: 50%;
+            margin: 30px 0 50px 0;
+        }
+        & h1{
+            @include font_style (Prata, 38px, 400, 46px);
+            margin-top: 20vh;
+        }
+        &__ceo-info{
+            position: absolute;
+            width: 20%;
+            bottom: 100px;
+            right: 50%;
+        }
+        &__ceo-info:first-child{
+            position: absolute;
+            width: 20%;
+            bottom: 100px;
+            right: 50%;
+        }
+    }
+    .header-pages{
+        position: relative;
+        padding: 0 calc(50vw - 585px);
+        &__top{
+            @include flex_content (space-between, center);
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+        }
+        & .logo-icon{
+            width: 15.6em;
+            height: 3.7em;
+        }
+        a{
+            text-decoration: none;
+            color: $color_black;
+            position: relative;
+            display: inline-block;
+        }
+        
+        & a:hover::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+        
+            /* Adjust height and bottom values to work with selected font */
+            height: .07em;
+            bottom: .1em;
+        
+            background-image: linear-gradient(
+                to right,
+                transparent 0%,
+                $color_black 30%,
+                $color_black 50%,
+                $color_black 70%,
+                transparent 100%
+            );
+        
+            /* Set-up fade-in animation */
+            opacity: 0;
+            animation: fadeIn 600ms ease-out forwards;
+        }
+    
+        @keyframes fadeIn{
+            100%{
+                opacity: 1;
+            }
+        }
+    
+        &__menu{
+            display: block;
+            list-style: none;
+                & li{
+                    display: inline-block;                
+                }
+                & li:not(:last-child){
+                    padding-right: 3.5em;
+                }
+            }
+            &__personal-area{
+                & svg{
+                    height: 1.2em;
+                    width: 1.3em;
+                }
+                & a{
+                    margin-left: 1em; 
+                }
+            }
+
+    }
+    .button{
+        padding: 1em 2em;
+        background: $color_red;
+        box-shadow: 0px 2px 8px rgba(27, 32, 50, 0.08);
+        border: 0px;
+        border-radius: 10px;
+        @include font_style (Open Sans, 14px, 700, 22px);
+        color: rgb(255, 255, 255);
+    }
+
+    .title{
+        @include font_style (Prata, 28px, 400, 36px);
+        margin-bottom: 30px;
+    }
+
+    .about-us{
+        @include flex_content(space-between, center);
+        padding: 0 calc(50vw - 585px);
+        background: rgb(244, 247, 255);
+        &__video{
+            padding: 50px 0;
+            & iframe{
+                filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.1));
+                border-radius: 20px;    
+            }
+        }
+        &__description{
+            padding: 0 5%;
+        }
+    }
+    .our-services{
+        padding: 0 calc(50vw - 585px);
+        &__title{
+            text-align: center;
+            margin: 50px 0;
+        }
+        &__list{
+            @include flex_content (space-between, center);
+            flex-wrap: wrap;
+        }
+    }
+    .service-card{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 20px;
+        width: 31%;
+        margin-bottom: 30px;
+        &__icon{
+            flex: 0 0 3.9em;
+            height: 3.9em;
+            margin: 1.5em 1em;
+            & svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__description{
+            & p{
+                @include font_style (Open Sans, 18px, 700, 26px); 
+            }
+            & a{
+                position: relative;
+                text-decoration: none;
+                @include font_style (Open Sans, 14px, 700, 22px); 
+                color: rgba(183, 184, 196, 1);
+            }
+            & a:after{
+                position: absolute;
+                content: '';
+                width: 0.7em;
+                height: 0.7em;
+                background: url(../img/arrow.png) no-repeat;
+                background-size: contain;
+                bottom: 0.2em;
+                right: -2em;
+
+            }
+        }
+    }
+    .service-card-pros{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        width: 50%;
+        &__icon{
+            flex: 0 0 3.1em;
+            height: 3.1em;
+            margin: 0 10px;
+            & svg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__text{
+            @include font_style (Open Sans, 14px, 400, 22px); 
+        }
+
+    }
+    .price{
+        @include flex_content(space-between, flex-start);
+        padding: 0 calc(50vw - 585px);
+        background: rgb(244, 247, 255);
+        &__description{
+            width: 50%;
+            padding: 0 10% 0 5%;
+            margin: 50px 0;
+            & p:last-of-type{
+                margin: 30px 0 50px;
+            }
+        }
+
+        &__img{
+            width: 50%;
+            height: 28em;
+            background: url(../img/price-block.png) no-repeat;
+            background-size: contain;
+            margin: 3em 0;
+        }
+        &__list{
+            margin-left: 20px;
+            & li:not(:last-child){
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .pros{
+        @include flex_content(space-between, flex-start);
+        padding: 0 calc(50vw - 585px);
+        &__description{
+            width: 50%;
+            margin:3em 0 0 5em;
+            & p:nth-of-type(2){
+                margin-bottom: 3em;
+            }
+        }
+        &__img{
+            width: 50%;
+            height: 28em;
+            background: url(../img/pros-block.png) no-repeat;
+            background-size: contain;
+            margin: 5em 0;
+        }
+        &__cards{
+            @include flex_content (space-between, flex-start);
+            flex-wrap: wrap;
+        }
+    }
+    .stats{
+        @include flex_content(space-between, center);
+        padding: 0 calc(50vw - 585px);
+        background: rgb(244, 247, 255);
+        &__block{
+            @include flex_content(center, center);
+            flex-direction: column;
+            background: rgb(255, 255, 255);
+            width: 23%;
+            height: 13em;
+            border-radius: 20px;
+            margin: 50px 0;
+            padding: 0 30px;
+            text-align: center;
+        }
+        &__title{
+            @include font_style(Prata, 38px, 400, 38px);
+            color: rgb(197, 35, 45);
+            margin-bottom: 15px;
+            & span{
+                font-size: 28px;
+                line-height: 0;
+            }
+
+        }
+    }
+    .reviews{
+        padding: 0 calc(50vw - 585px);
+        position: relative;
+        &__nav{
+            @include flex_content(space-between, center);
+            margin: 3em 0;
+        }
+        &__title{
+            @include font_style(Prata, 28px, 400, 36px);
+        }
+        &__btns{
+            @include flex_content(space-between, center);
+        }
+        &__btn{
+            @include flex_content(center, center);
+            height: 45px;
+            width: 45px;
+            background: rgb(197, 35, 45);
+            border-radius: 50px;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+        &__btn:first-of-type{
+            margin-right: 15px;
+        }
+        &__references{
+            @include flex_content(flex-start, flex-start);
+            flex-wrap: nowrap;
+        }
+        &__reference-block{
+            flex: 0 0 370px;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+        }
+        &__reference-block:not(:last-child){
+            margin-right: 30px;
+        }
+        &__block-title{
+            @include font_style (Open Sans, 18px, bold, 26px); 
+        }
+        &__block-text{
+            @include font_style (Open Sans, 14px, 400, 22px); 
+            margin: 15px 0;
+        }
+        &__block-info{
+            @include font_style (Open Sans, 14px, bold, 22px); 
+        }
+    }
+    .faq{
+        @include flex_content(space-between, center);
+        padding: 0 calc(50vw - 585px);
+
+        &__questions{
+            width: 50%;
+            @include font_style (Open Sans, 18px, 700, 26px); 
+            &>div:first-of-type{
+                border-top: 1px solid rgb(197, 35, 45);
+            }
+        }
+        &__photo{
+            width: 50%;
+        }
+        &__question{
+            @include flex_content(space-between, center);
+            border-bottom: 1px solid rgb(197, 35, 45);
+            & p{
+                padding: 20px 20% 20px 20px;
+            }
+        }
+    }
+    .consultation{
+        @include flex_content(space-between, center);
+        padding: 3em calc(50vw - 585px) 6em;
+        background: rgb(244, 247, 255);
+        &__info{
+            width: 50%;
+            margin-bottom: 5em;
+        }
+        &__form{
+            width: 50%;
+            & form{
+            display: flex;
+            flex-direction: column;
+            & input, label, textarea {
+                display:block;
+            }
+            & label{
+                margin: 0 18% 15px 18%;
+            }
+            & input, textarea {
+                
+                // margin-bottom: 15px;
+                padding: 10px 15px;
+                border: 1px solid #131F49;
+                border-radius: 20px;
+                resize: none;
+                width: 100%;
+            }
+            & #upload-lable{
+                display: inline-block;
+                position: relative;
+                width: 3em;
+                height: 3em;
+                background: #C5232D;
+                background-image: url(../img/svg/pin-icon.svg);
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 50px;
+                color: white;
+                padding: 0.5rem;
+                font-family: sans-serif;
+                cursor: pointer;
+                margin-top: 1rem;
+            }
+            & #upload-lable::after{
+                position: absolute;
+                width: 10em;
+                content: "Прикрепить файл";
+                @include font_style (Open Sans, 16px, 400, 24px);
+                top: 0.8em;
+                left: 3.5em;
+            }
+        }
+        & input::placeholder{
+            @include font_style (Open Sans, 16px, 400, 24px);
+            color: rgba(183, 184, 196, 1);
+        }
+        & button{
+            margin: 2em 0 0 18%;
+            width:  9em;
+            height: 3.5em;
+            border: 0;
+            border-radius: 10px;
+            background: $color_red;
+            @include font_style (Open Sans, 14px, 700, 24px);
+            color: rgb(255, 255, 255);
+        }
+        }
+    }
+    .footer{
+        @include flex_content(space-between, center);
+        padding: 4em calc(50vw - 585px);
+        background: rgba(19, 31, 73, 1);
+        @include font_style (Open Sans, 14px, 400, 22px);
+        color:rgb(255, 255, 255);
+        & a{
+            text-decoration: none;
+            color:rgb(255, 255, 255);
+        }
+        & li{
+            list-style: none;
+            margin-bottom: 1em;
+        }
+        &__logo{
+            display: flex;
+            flex-direction: column;
+            & p:first-of-type{
+                @include font_style (Prata, 28px, 400, 36px);
+                color:rgb(255, 255, 255);
+                margin-bottom: 1.5em;
+    
+            }
+        }
+        // &__menu{
+
+        // }
+        &__social{
+
+            & svg{
+                width: 1.2em;
+                height: 1.2em;
+                margin-right: 1em;
+            }
+        }
+        &___rights-mobile{
+            display: none;
+        }
+    }
+
+@import "media-quer";
