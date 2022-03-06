@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Prata&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
     <title>Proshu sud</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
@@ -304,10 +306,10 @@
             <div class="reviews__nav">
                 <p class="reviews__title">Отзывы клиентов</p>
                 <div class="reviews__btns">
-                    <div class="reviews__btn">
+                    <div class="reviews__btn prev-btn">
                         &#60;
                     </div>
-                    <div class="reviews__btn">
+                    <div class="reviews__btn next-btn">
                         &#62;
                     </div>
                 </div>
@@ -340,24 +342,32 @@
         <section class="faq">
             <div class="faq__questions">
                 <p class="title">Частые вопросы</p>
-                <div class="faq__question">
+                <div class="faq__question" id="first-question">
+                    <div class="faq__btn">+</div>
                     <p>Какую информацию необходимо предоставить, чтобы получить иск?</p>
-                    <div class="faq__btn">
-                        +
+                    <div class="faq__answer">
+                        <p>Для получения иска следует выбрать необходимое вам исковое заявление. Заполнить все поля с данными сторон и раздел «Комментарии». Если вам какие-либо данные неизвестны, вы оставляете поле пустым. Наши юристы обработают данные и в кратчайшие сроки предоставят Вам сформированное исковое заявление.</p>
                     </div>
                 </div>
+
                 <div class="faq__question">
+                    <div class="faq__btn">+</div>
                     <p>Какие у меня гарантии, что я получу иск, который суд примет к рассмотрению?</p>
-                    <div class="faq__btn">
-                        +
+                    <div class="faq__answer">
+                        <p>Для получения иска следует выбрать необходимое вам исковое заявление. Заполнить все поля с данными сторон и раздел «Комментарии». Если вам какие-либо данные неизвестны, вы оставляете поле пустым. Наши юристы обработают данные и в кратчайшие сроки предоставят Вам сформированное исковое заявление.</p>
                     </div>
                 </div>
                 <div class="faq__question">
+                    <div class="faq__btn" id="last-btn">+</div>
                 <p>Можно ли в суде обойтись без адвоката?</p>
-                <div class="faq__btn">
-                    +
+                <div class="faq__answer">
+                    <p>Для получения иска следует выбрать необходимое вам исковое заявление. Заполнить все поля с данными сторон и раздел «Комментарии». Если вам какие-либо данные неизвестны, вы оставляете поле пустым. Наши юристы обработают данные и в кратчайшие сроки предоставят Вам сформированное исковое заявление.</p>
                 </div>
                 </div>
+                <div class="faq__answer">
+                    <p>Для получения иска следует выбрать необходимое вам исковое заявление. Заполнить все поля с данными сторон и раздел «Комментарии». Если вам какие-либо данные неизвестны, вы оставляете поле пустым. Наши юристы обработают данные и в кратчайшие сроки предоставят Вам сформированное исковое заявление.</p>
+                </div>
+               
             </div>
             <div class="faq__photo">
                <img src="./img/faq-photo.png" alt="главый юрист прошу суд"> 
@@ -430,6 +440,11 @@
             Все права защищены.</p>
     </footer>
 <script src="./script/menu.js"></script>
+<script src="./script/accordion.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="./script/slider.js"></script>
+<script type="text/javascript" src="./slick/slick.min.js"></script>
 </body>
 <svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 60" id="logo">

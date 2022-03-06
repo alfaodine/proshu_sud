@@ -494,24 +494,77 @@ body{
     .faq{
         @include flex_content(space-between, center);
         padding: 0 calc(50vw - 585px);
-
+        & #first-question{
+            border-top: 1px solid rgb(197, 35, 45);
+        }
         &__questions{
             width: 50%;
             @include font_style (Open Sans, 18px, 700, 26px); 
-            &>div:first-of-type{
-                border-top: 1px solid rgb(197, 35, 45);
-            }
         }
+        &__answer{
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            @include font_style (Open Sans, 14px, 400, 22px); 
+        }
+        // .answer-active{
+        //     padding: 15px;
+        //     margin-bottom: 15px;
+        //     border-bottom: 1px solid $color_red;
+
+
+        // }
+        // .active-question{
+        //     transition: background-color 0.2s ease-out, color 0.2s ease-out;
+        //     background: $color_red;
+        //     border-radius: 20px;
+        //     color: rgb(255, 255, 255);
+        // }
         &__photo{
             width: 50%;
         }
         &__question{
+            position: relative;
             @include flex_content(space-between, center);
+            flex-direction: column;
             border-bottom: 1px solid rgb(197, 35, 45);
-            & p{
+            &>p{
                 padding: 20px 20% 20px 20px;
+                width: 100%;
             }
         }
+        &__btn{
+            position: absolute;
+            top: 1.3em;
+            right: 20px;
+            color: $color_red;
+            font-size: 28px;
+            font-weight: normal;
+        }
+        & #last-btn{
+            top: 0.7em;
+        }
+
+    }
+    .active-answer{
+        & .faq__answer{
+            padding: 15px;
+            margin-bottom: 15px;
+            // border-bottom: 1px solid $color_red;
+        }
+        & >p{
+            margin-bottom: 15px;
+            transition: background-color 0.2s ease-out, color 0.2s ease-out;
+            background: $color_red;
+            border-radius: 20px;
+            color: rgb(255, 255, 255);
+        }
+        & .faq__btn{
+            transition: transform .2s ease-in-out;
+            transform: rotate(45deg);
+            color: rgb(255, 255, 255);
+        }
+
     }
     .consultation{
         @include flex_content(space-between, center);
