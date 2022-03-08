@@ -15,12 +15,19 @@
     .price, .pros{
         align-items: center;
     }
+    .header{
+        & h1{
+            margin-top: 90px;
+        }
+    }
 
 }
 @media (max-width: 992px){
     .header{
         & h1{
             font-size: 34px;
+            width: 90%;
+            margin-top: 70px;
         }
         & .logo-icon {
             width: 12.6em;
@@ -36,7 +43,7 @@
             margin-left: 2px;
         }
         &__ceo-info {
-            width: 39%;
+            width: 30%;
             bottom: 100px;
         }
         &__description {
@@ -50,10 +57,17 @@
         }
         &__text{
             width: 60%;
+            margin: 15px 0 15px 0;
         }
         &__photo img {
             height: 95vh;
         }
+        &__menu li:not(:last-child) {
+            padding-right: 2.5em;
+        }
+    }
+    .button{
+        padding: 0.8em 0.8em;
     }
     .about-us{
         &__video{
@@ -118,6 +132,40 @@
             margin-left: .5em; 
         }
     }
+    .header{
+        padding: 0;
+        height: 84vh;
+        &__top{
+            z-index: 2;
+            height: 65px;
+            background: rgb(255, 255, 255);
+        }
+        &__bg{
+            top: -47vh;
+            left: 46%;
+            transform: rotate(300deg);
+        }
+        & h1{
+            font-size: 30px;
+            line-height: 36px;
+        }
+        &__photo img {
+            width: 70vw;
+            height: auto;
+            position: absolute;
+            bottom: 0;
+        }
+        &__photo {
+            height: 77vh;
+        }
+        &__description{
+            width: 100%;
+        }
+        &__ceo-info{
+            width: 45%;
+            line-height: 21px;
+        }
+    }
     .header__menu{
         // left: -105%;        
         display: flex;
@@ -151,10 +199,18 @@
         background: $color_red;
         border-radius: 0px 0px 130px 0px;
         // left: -110%;
-        top:7vh;
+        top: 65px;
         left: -100px;
         // transition: left 0.3s;
         transition: all .8s ease-in-out;
+    }
+    #button_mobile{
+        display: block; 
+        margin: 30px auto;
+        padding: 1.1em 1.5em;
+    }
+    #button_desktop{
+        display: none; 
     }
     .active-menu{
         width: 100vw;
@@ -162,8 +218,11 @@
         transition: all .5s ease-in-out;
         left: 0;
         & .header__menu{
-            width: 100vw;
-            height: 14em;
+            width: calc(100vw + 4px);
+            height: calc(14em + 3px);
+            position: relative;
+            top: -2px;
+            left: -2px;
             transition: all .5s ease-in-out;
             & li{
                 opacity: 1;
@@ -194,6 +253,7 @@
             & iframe{
                 width: 90%;
                 margin: 0 5%;
+                height: auto;
             }
         }
     }
@@ -255,6 +315,10 @@
             display: none;
             margin-top: 30px;
         }
+    }
+    #button_mobile{
+        margin: 20px auto;
+        width: 90%;
     }
     
 }

@@ -23,7 +23,7 @@ body{
     outline-width: 0;
   }
   .nav-toggle span {
-    background: rgb(0, 0, 0);
+    background: $color_red;
     display: block; 
     transform: rotate(0deg);
     transition: .2s ease all;
@@ -164,7 +164,7 @@ body{
             z-index: 1;
         }
         &__description{
-            width: 50%;
+            width: 50%; 
         }
         &__photo{
             width: 50%;
@@ -188,7 +188,7 @@ body{
             right: 50%;
         }
         &__ceo-info:first-child{
-            position: absolute;
+            position: absolute; 
             width: 20%;
             bottom: 100px;
             right: 50%;
@@ -280,7 +280,7 @@ body{
 
     .title{
         @include font_style (Prata, 28px, 400, 36px);
-        margin-bottom: 30px;
+        margin-bottom: 30px; 
     }
 
     .about-us{
@@ -296,7 +296,11 @@ body{
         }
         &__description{
             padding: 0 5%;
+
         }
+    }
+    #button_mobile{
+        display: none; 
     }
     .our-services{
         padding: 0 calc(50vw - 585px);
@@ -491,7 +495,7 @@ body{
             margin: 15px 0;
         }
         &__block-info{
-            @include font_style (Open Sans, 14px, bold, 22px); 
+            @include font_style (Open Sans, 14px, bold, 22px);
         }
     }
     .faq{
@@ -525,6 +529,9 @@ body{
         // }
         &__photo{
             width: 50%;
+            & img {
+                width: 100%;
+            }
         }
         &__question{
             position: relative;

@@ -29,7 +29,7 @@ body {
 }
 
 .nav-toggle span {
-  background: black;
+  background: #c5232d;
   display: block;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
@@ -354,6 +354,10 @@ body {
 
 .about-us__description {
   padding: 0 5%;
+}
+
+#button_mobile {
+  display: none;
 }
 
 .our-services {
@@ -778,6 +782,10 @@ body {
   width: 50%;
 }
 
+.faq__photo img {
+  width: 100%;
+}
+
 .faq__question {
   position: relative;
   display: -webkit-box;
@@ -1054,11 +1062,16 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
+  .header h1 {
+    margin-top: 90px;
+  }
 }
 
 @media (max-width: 992px) {
   .header h1 {
     font-size: 34px;
+    width: 90%;
+    margin-top: 70px;
   }
   .header .logo-icon {
     width: 12.6em;
@@ -1074,7 +1087,7 @@ body {
     margin-left: 2px;
   }
   .header__ceo-info {
-    width: 39%;
+    width: 30%;
     bottom: 100px;
   }
   .header__description {
@@ -1090,9 +1103,16 @@ body {
   }
   .header__text {
     width: 60%;
+    margin: 15px 0 15px 0;
   }
   .header__photo img {
     height: 95vh;
+  }
+  .header__menu li:not(:last-child) {
+    padding-right: 2.5em;
+  }
+  .button {
+    padding: 0.8em 0.8em;
   }
   .about-us__video {
     -webkit-box-flex: 1;
@@ -1157,6 +1177,41 @@ body {
   #personal-area_mobile a {
     margin-left: .5em;
   }
+  .header {
+    padding: 0;
+    height: 84vh;
+  }
+  .header__top {
+    z-index: 2;
+    height: 65px;
+    background: white;
+  }
+  .header__bg {
+    top: -47vh;
+    left: 46%;
+    -webkit-transform: rotate(300deg);
+            transform: rotate(300deg);
+  }
+  .header h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .header__photo img {
+    width: 70vw;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+  }
+  .header__photo {
+    height: 77vh;
+  }
+  .header__description {
+    width: 100%;
+  }
+  .header__ceo-info {
+    width: 45%;
+    line-height: 21px;
+  }
   .header__menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1185,10 +1240,18 @@ body {
     height: 0px;
     background: #c5232d;
     border-radius: 0px 0px 130px 0px;
-    top: 7vh;
+    top: 65px;
     left: -100px;
     -webkit-transition: all .8s ease-in-out;
     transition: all .8s ease-in-out;
+  }
+  #button_mobile {
+    display: block;
+    margin: 30px auto;
+    padding: 1.1em 1.5em;
+  }
+  #button_desktop {
+    display: none;
   }
   .active-menu {
     width: 100vw;
@@ -1198,8 +1261,11 @@ body {
     left: 0;
   }
   .active-menu .header__menu {
-    width: 100vw;
-    height: 14em;
+    width: calc(100vw + 4px);
+    height: calc(14em + 3px);
+    position: relative;
+    top: -2px;
+    left: -2px;
     -webkit-transition: all .5s ease-in-out;
     transition: all .5s ease-in-out;
   }
@@ -1237,6 +1303,7 @@ body {
   .about-us__video iframe {
     width: 90%;
     margin: 0 5%;
+    height: auto;
   }
   .price__img {
     display: none;
@@ -1307,6 +1374,10 @@ body {
   .footer___rights-mobile {
     display: none;
     margin-top: 30px;
+  }
+  #button_mobile {
+    margin: 20px auto;
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */
