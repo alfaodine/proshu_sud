@@ -685,4 +685,14 @@ body{
         }
     }
 
+
+    // ---------------about-us page---------------
+
+    .quote{
+        padding: 0 calc(50vw - 450px);
+        @include font_style (Prata, 28px, 400, 36px);
+        &__text{
+            margin: 30px 120px;
+        }
+    }
 @import "media-quer";

@@ -1044,6 +1044,20 @@ body {
   display: none;
 }
 
+.quote {
+  padding: 0 calc(50vw - 450px);
+  font-family: Prata;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+  color: #343434;
+}
+
+.quote__text {
+  margin: 30px 120px;
+}
+
 @media (max-width: 1170px) {
   .button {
     padding: 1em 1em;
