@@ -166,6 +166,9 @@
             line-height: 21px;
         }
     }
+    .header_page{
+        height: auto;
+        }
     .header__menu{
         // left: -105%;        
         display: flex;
@@ -299,13 +302,7 @@
             }
         }
     }
-}
-@media (max-width: 576px){
-
-    .service-card-pros{
-        width: 100%;
-    }
-    .footer{
+    .footer {
         flex-direction: column;
         text-align: center;
         &__logo>p:last-of-type{
@@ -316,6 +313,13 @@
             margin-top: 30px;
         }
     }
+}
+@media (max-width: 576px){
+
+    .service-card-pros{
+        width: 100%;
+    }
+
     #button_mobile{
         margin: 20px auto;
         width: 90%;

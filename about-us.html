@@ -15,39 +15,69 @@
 </head>
 
 <body>
-    <header class="header-pages">
-        <div class="header-pages__top">
+    <header class="header header_page">
+        <div class="header__top">
             <svg class="icon logo-icon">
                 <use xlink:href="#logo"></use>
             </svg> 
-            <!-- burger menu    -->
+            <!-- burger menu  -->
             <button class="nav-toggle">
                 <span class="bar-top"></span>
                 <span class="bar-mid"></span>
                 <span class="bar-bot"></span>
               </button>
-
-            <ul class="header-pages__menu">
+              <div class="header__menu-bg">
+            <ul class="header__menu">
                 <li class="menu__item"><a href="">Кто мы</a></li>
                 <li class="menu__item"><a href="">Как это работает</a></li>
                 <li class="menu__item"><a href="">Контакты</a></li>
+                <li class="menu__item" id="personal-area_mobile"><svg class="icon">
+                    <use xlink:href="#presonal-area"></use>
+                </svg>
+                <a href="#" class="personal-area__link">Личный кабинет</a></li>
+                <!-- <div class="header__personal-area personal-area_mobile">
+                    <svg class="icon">
+                        <use xlink:href="#presonal-area"></use>
+                    </svg>
+                    <a href="#" class="personal-area__link">Личный кабинет</a>
+                </div> -->
             </ul>
-            <div class="header-pages__personal-area">
+        </div>
+            <div class="header__personal-area">
                 <svg class="icon">
                     <use xlink:href="#presonal-area"></use>
                 </svg>
                 <a href="#" class="personal-area__link">Личный кабинет</a>
             </div>
         </div>
+        <!-- <div class="header__main">
+            <div class="header__description">
+                <h1>Сервис составления исковых заявлений ProshuSud</h1>
+                <p class="header__text">
+                    Окажем вам помощь при оформлении искового заявления в суд
+                </p>
+                <button class="button" id="button_desktop">Получить консультацию онлайн</button>
+            </div>
+            <div class="header__photo">
+                <img src="./img/header-photo1x.png" alt="Охтень Алина Андреевна">
+            </div>
+            <div class="header__ceo-info">
+                <b>Охтень Алина Андреевна,</b> 
+                <p>руководитель проекта ProshuSud, 17 лет работы в судебной системе</p>
+            </div>
+        </div> -->
 
+        <!-- <div class="header__bg">
+
+        </div> -->
 
     </header>
     <main class="main">
 
 
-        <section class="price">
-            <div class="price__description">
-                <p class="price__title title">
+        <section class="who-we-are">
+            <div class="who-we-are__description">
+                <p class="who-we-are__title title">
                     Кто  мы
                 </p>
                 <p>Необходима юридическая помощь в составлении искового завления?</p>
@@ -56,26 +86,44 @@
                     
                         <p>Руководит сервисом Охтень Алина Андреевна</p>
             </div>
-            <div class="img">
+            <!-- <div class="img"> -->
                 <img src="./img/about-us/top_photo.png" alt="">
-            </div>
+            <!-- </div> -->
         </section>
         <section class="quote">
             <div class="quote__text">
-                <p>“Вас приветствует Охтень Алина Андреевна!Я рада оказать вам помощь при оформлении искового заявления в суд!”</p>
+                <p>“Вас приветствует Охтень Алина Андреевна! Я рада оказать вам помощь при оформлении искового заявления в суд!”</p>
+            </div>
+            <div class="quote__gridbox">
+                <div class="quote__img">
+                    <img src="./img/date-line.svg" alt="Dates image">
+                </div>
+                <div class="quote__date-block">
+                    <p>2003</p>
+                    <p>Помощник судьи</p>
+                </div>
+                <div class="quote__date-block">
+                    <p>2008</p>
+                    <p>Судья суда общей юрисдикции</p>
+                </div>
+                <div class="quote__date-block">
+                    <p>2019</p>
+                    <p>Основатель Центра предоставления юридической помощи «Мир Права»</p>
+                </div>
+                
             </div>
         </section>
 
-        <section class="price">
-            <div class="img">
+        <section class="speciality">
+            <!-- <div class="img"> -->
                 <img src="./img/about-us/bottom_photo.png" alt="">
-            </div>
-            <div class="price__description">
+            <!-- </div> -->
+            <div class="speciality__description">
 
                 <p>Имею высшее юридическое образование (квалификация магистр права).
                     Закончила Одесскую национальную юридическую академию</p>
                     <p>Специалсит в сфере:</p>
-                <ul class="price__list">
+                <ul class="speciality__list">
                     <li>семейного права</li>
                     <li>земельного права</li>
                     <li>гражданского права</li>
