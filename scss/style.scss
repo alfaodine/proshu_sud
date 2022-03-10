@@ -266,7 +266,45 @@ body{
 
     // }
     #personal-area_mobile{
-        display: none;
+        display: none; 
+        a{
+            text-decoration: none;
+            color: $color_black;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+        
+        & a:hover::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+        
+            /* Adjust height and bottom values to work with selected font */
+            height: .07em;
+            bottom: .1em;
+        
+            background-image: linear-gradient(
+                to right,
+                transparent 0%,
+                $color_black 30%,
+                $color_black 50%,
+                $color_black 70%,
+                transparent 100%
+            );
+        
+            /* Set-up fade-in animation */
+            opacity: 0;
+            animation: fadeIn 600ms ease-out forwards;
+        }
+    
+        @keyframes fadeIn{
+            100%{
+                opacity: 1;
+            }
+        }
+    
     }
     .button{
         padding: 1em 2em;
@@ -693,7 +731,7 @@ body{
     }
     .who-we-are{
         & img{
-            width: 50%;
+            width: 50%; 
             margin-top: auto; 
         }
         & p:not(:first-of-type){
@@ -706,7 +744,7 @@ body{
     .speciality{
         & img{
             width: 50%;
-            margin-top: auto; 
+            margin-top: auto;  
         }
         &__description p:last-of-type {
             margin: 2em 0 .5em;
@@ -745,4 +783,12 @@ body{
             }
         }
     }
+
+// ---------------for pages-----------
+
+#pages_style{
+    & .menu_mobile{
+        display: none;
+    }
+}
 @import "media-quer";

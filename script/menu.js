@@ -1,13 +1,16 @@
 let nav = document.querySelector('.nav-toggle');
 let menu = document.querySelector('.header__menu');
 let menuBg = document.querySelector('.header__menu-bg');
+let menuBgPages = document.querySelector('.menu_mobile');
 let presonalArea = document.querySelector('.header__personal-area');
 
 nav.addEventListener('click', function(){
     // menuBg.setAttribute("style","height:500px");
     // console.log(menu.clientHeight);
     nav.classList.toggle('opened');
-    menuBg.classList.toggle('active-menu');
+    if (menuBg) {menuBg.classList.toggle('active-menu')};
+    if(menuBgPages) {menuBgPages.classList.toggle('active-menu')};
+
     if (nav.classList.contains('opened')){
         
         // menuBg.classList.toggle('active-menu');

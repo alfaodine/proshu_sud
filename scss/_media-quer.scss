@@ -132,6 +132,18 @@
             margin-left: .5em; 
         }
     }
+    #pages_style{
+        & .menu_mobile{
+            display: block;
+            & a{
+                text-decoration: none;
+                color: $color_black;
+                position: relative;
+                display: inline-block;
+                font-weight: 700;
+            } 
+        }
+    }
     .header{
         padding: 0;
         height: 84vh;
@@ -245,6 +257,15 @@
         left: -110%;
         transition: left 0.3s;
     }
+    .speciality{
+        flex-direction: column-reverse;
+        & img {
+            width: 100%;
+        }
+        &__description{
+            width: 100%;
+        }
+    }
     // ----------------end of menu---------
     .about-us{
         flex-direction: column-reverse;
@@ -259,6 +280,9 @@
                 height: auto;
             }
         }
+    }
+    .quote__text {
+        margin: 30px 50px;
     }
     .price{
         &__img{
@@ -324,5 +348,13 @@
         margin: 20px auto;
         width: 90%;
     }
-    
+    .who-we-are{
+        flex-direction: column;
+        &__description{
+            width: 100%;
+        }
+        & img{
+            width: 100%;
+        }
+    }
 }

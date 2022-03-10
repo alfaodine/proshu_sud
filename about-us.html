@@ -14,35 +14,35 @@
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 
-<body>
+<body id="pages_style">
     <header class="header header_page">
         <div class="header__top">
             <svg class="icon logo-icon">
                 <use xlink:href="#logo"></use>
-            </svg> 
+            </svg>
             <!-- burger menu  -->
             <button class="nav-toggle">
                 <span class="bar-top"></span>
                 <span class="bar-mid"></span>
                 <span class="bar-bot"></span>
-              </button>
-              <div class="header__menu-bg">
-            <ul class="header__menu">
-                <li class="menu__item"><a href="">Кто мы</a></li>
-                <li class="menu__item"><a href="">Как это работает</a></li>
-                <li class="menu__item"><a href="">Контакты</a></li>
-                <li class="menu__item" id="personal-area_mobile"><svg class="icon">
-                    <use xlink:href="#presonal-area"></use>
-                </svg>
-                <a href="#" class="personal-area__link">Личный кабинет</a></li>
-                <!-- <div class="header__personal-area personal-area_mobile">
+            </button>
+            <div class="header__menu-bg">
+                <ul class="header__menu">
+                    <li class="menu__item"><a href="">Кто мы</a></li>
+                    <li class="menu__item"><a href="">Как это работает</a></li>
+                    <li class="menu__item"><a href="">Контакты</a></li>
+                    <li class="menu__item" id="personal-area_mobile"><svg class="icon">
+                            <use xlink:href="#presonal-area"></use>
+                        </svg>
+                        <a href="#" class="personal-area__link">Личный кабинет</a></li>
+                    <!-- <div class="header__personal-area personal-area_mobile">
                     <svg class="icon">
                         <use xlink:href="#presonal-area"></use>
                     </svg>
                     <a href="#" class="personal-area__link">Личный кабинет</a>
                 </div> -->
-            </ul>
-        </div>
+                </ul>
+            </div>
             <div class="header__personal-area">
                 <svg class="icon">
                     <use xlink:href="#presonal-area"></use>
@@ -73,26 +73,44 @@
 
     </header>
     <main class="main">
+        <div class="header__menu-bg menu_mobile">
+            <ul class="header__menu">
+                <li class="menu__item"><a href="">Кто мы</a></li>
+                <li class="menu__item"><a href="">Как это работает</a></li>
+                <li class="menu__item"><a href="">Контакты</a></li>
+                <li class="menu__item" id="personal-area_mobile"><svg class="icon">
+                        <use xlink:href="#presonal-area"></use>
+                    </svg>
+                    <a href="#" class="personal-area__link">Личный кабинет</a></li>
+                <!-- <div class="header__personal-area personal-area_mobile">
+                <svg class="icon">
+                    <use xlink:href="#presonal-area"></use>
+                </svg>
+                <a href="#" class="personal-area__link">Личный кабинет</a>
+            </div> -->
+            </ul>
+        </div>
 
 
         <section class="who-we-are">
             <div class="who-we-are__description">
                 <p class="who-we-are__title title">
-                    Кто  мы
+                    Кто мы
                 </p>
                 <p>Необходима юридическая помощь в составлении искового завления?</p>
 
-                    <p>Наш сервис ProshuSud  поможет с оформлением искового заявления в онлайн режиме.</p>
-                    
-                        <p>Руководит сервисом Охтень Алина Андреевна</p>
+                <p>Наш сервис ProshuSud поможет с оформлением искового заявления в онлайн режиме.</p>
+
+                <p>Руководит сервисом Охтень Алина Андреевна</p>
             </div>
             <!-- <div class="img"> -->
-                <img src="./img/about-us/top_photo.png" alt="">
+            <img src="./img/about-us/top_photo.png" alt="">
             <!-- </div> -->
         </section>
         <section class="quote">
             <div class="quote__text">
-                <p>“Вас приветствует Охтень Алина Андреевна! Я рада оказать вам помощь при оформлении искового заявления в суд!”</p>
+                <p>“Вас приветствует Охтень Алина Андреевна! Я рада оказать вам помощь при оформлении искового заявления
+                    в суд!”</p>
             </div>
             <div class="quote__gridbox">
                 <div class="quote__img">
@@ -110,19 +128,19 @@
                     <p>2019</p>
                     <p>Основатель Центра предоставления юридической помощи «Мир Права»</p>
                 </div>
-                
+
             </div>
         </section>
 
         <section class="speciality">
             <!-- <div class="img"> -->
-                <img src="./img/about-us/bottom_photo.png" alt="">
+            <img src="./img/about-us/bottom_photo.png" alt="">
             <!-- </div> -->
             <div class="speciality__description">
 
                 <p>Имею высшее юридическое образование (квалификация магистр права).
                     Закончила Одесскую национальную юридическую академию</p>
-                    <p>Специалсит в сфере:</p>
+                <p>Специалсит в сфере:</p>
                 <ul class="speciality__list">
                     <li>семейного права</li>
                     <li>земельного права</li>
@@ -143,7 +161,7 @@
         <div class="footer__logo">
             <p>ProshuSud</p>
             <p>©2022 Мир Права<br>
-            Все права защищены.</p>
+                Все права защищены.</p>
         </div>
         <ul class="footer__menu">
             <li><a href="#">Кто мы</a></li>
@@ -153,7 +171,7 @@
         </ul>
 
         <div class="footer__social">
-           <!-- <div><svg class="icon">
+            <!-- <div><svg class="icon">
                 <use xlink:href="#tg-icon"></use>
               </svg>
               <p>ProshuSud@gmail.com</p>
@@ -164,19 +182,19 @@
               <p>ProshuSud@gmail.com</p>
             </div> 
             <ul> -->
-                <li><svg class="icon">
+            <li><svg class="icon">
                     <use xlink:href="#email-icon"></use>
-                  </svg><a href="#">ProshuSud@gmail.com</a></li>
-                <li><svg class="icon" viewBox="0 0 8 16">
+                </svg><a href="#">ProshuSud@gmail.com</a></li>
+            <li><svg class="icon" viewBox="0 0 8 16">
                     <use xlink:href="#fb-icon"></use>
-                  </svg><a href="#">ProshuSud</a></li>
-                <li><svg class="icon">
+                </svg><a href="#">ProshuSud</a></li>
+            <li><svg class="icon">
                     <use xlink:href="#tg-icon"></use>
-                  </svg><svg class="icon">
+                </svg><svg class="icon">
                     <use xlink:href="#whatsup-icon"></use>
-                  </svg><svg class="icon">
+                </svg><svg class="icon">
                     <use xlink:href="#viber-icon"></use>
-                  </svg></li>
+                </svg></li>
             </ul>
 
         </div>
@@ -184,7 +202,7 @@
         <p class="footer_rights-mobile">©2022 Мир Права<br>
             Все права защищены.</p>
     </footer>
-<script src="./script/menu.js"></script>
+    <script src="./script/menu.js"></script>
 </body>
 <svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 60" id="logo">
@@ -759,6 +777,8 @@
             fill="white"></path>
     </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" id="email-icon">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.58873 2.62829L9.99992 7.81612L17.4111 2.62829C17.2733 2.35577 16.9899 2.16667 16.6666 2.16667H3.33325C3.00995 2.16667 2.72655 2.35577 2.58873 2.62829ZM17.4999 4.60055L10.4778 9.51603C10.1909 9.71688 9.80897 9.71688 9.52203 9.51603L2.49992 4.60055V13C2.49992 13.4564 2.87682 13.8333 3.33325 13.8333H16.6666C17.123 13.8333 17.4999 13.4564 17.4999 13V4.60055ZM0.833252 3C0.833252 1.6231 1.95635 0.5 3.33325 0.5H16.6666C18.0435 0.5 19.1666 1.6231 19.1666 3V13C19.1666 14.3769 18.0435 15.5 16.6666 15.5H3.33325C1.95635 15.5 0.833252 14.3769 0.833252 13V3Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M2.58873 2.62829L9.99992 7.81612L17.4111 2.62829C17.2733 2.35577 16.9899 2.16667 16.6666 2.16667H3.33325C3.00995 2.16667 2.72655 2.35577 2.58873 2.62829ZM17.4999 4.60055L10.4778 9.51603C10.1909 9.71688 9.80897 9.71688 9.52203 9.51603L2.49992 4.60055V13C2.49992 13.4564 2.87682 13.8333 3.33325 13.8333H16.6666C17.123 13.8333 17.4999 13.4564 17.4999 13V4.60055ZM0.833252 3C0.833252 1.6231 1.95635 0.5 3.33325 0.5H16.6666C18.0435 0.5 19.1666 1.6231 19.1666 3V13C19.1666 14.3769 18.0435 15.5 16.6666 15.5H3.33325C1.95635 15.5 0.833252 14.3769 0.833252 13V3Z"
+            fill="white" />
     </symbol>
 </svg>
