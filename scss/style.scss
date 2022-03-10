@@ -791,4 +791,15 @@ body{
         display: none;
     }
 }
+
+// ---------------for how-to page-----------
+
+.how-it-works{
+    padding: 0 calc(50vw - 585px);
+    &__title{
+        @include font_style (Prata, 38px, 400, 46px);
+        text-align: center;
+        margin: 50px 0;
+    }
+}
 @import "media-quer";
