@@ -10,41 +10,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Prata&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
     <title>Proshu sud</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
 </head>
 
-<body>
-    <header class="header">
+<body id="pages_style">
+    <header class="header header_page">
         <div class="header__top">
             <svg class="icon logo-icon">
                 <use xlink:href="#logo"></use>
-            </svg> 
+            </svg>
             <!-- burger menu  -->
             <button class="nav-toggle">
                 <span class="bar-top"></span>
                 <span class="bar-mid"></span>
                 <span class="bar-bot"></span>
-              </button>
-              <div class="header__menu-bg">
-            <ul class="header__menu">
-                <li class="menu__item"><a href="">Кто мы</a></li>
-                <li class="menu__item"><a href="">Как это работает</a></li>
-                <li class="menu__item"><a href="">Контакты</a></li>
-                <li class="menu__item" id="personal-area_mobile"><svg class="icon">
-                    <use xlink:href="#presonal-area"></use>
-                </svg>
-                <a href="#" class="personal-area__link">Личный кабинет</a></li>
-                <!-- <div class="header__personal-area personal-area_mobile">
-                    <svg class="icon">
-                        <use xlink:href="#presonal-area"></use>
-                    </svg>
-                    <a href="#" class="personal-area__link">Личный кабинет</a>
-                </div> -->
-            </ul>
-        </div>
+            </button>
+            <div class="header__menu-bg">
+                <ul class="header__menu">
+                    <li class="menu__item"><a href="">Кто мы</a></li>
+                    <li class="menu__item"><a href="">Как это работает</a></li>
+                    <li class="menu__item"><a href="">Контакты</a></li>
+                    <li class="menu__item" id="personal-area_mobile"><svg class="icon">
+                            <use xlink:href="#presonal-area"></use>
+                        </svg>
+                        <a href="#" class="personal-area__link">Личный кабинет</a></li>
+
+                </ul>
+            </div>
             <div class="header__personal-area">
                 <svg class="icon">
                     <use xlink:href="#presonal-area"></use>
@@ -52,349 +45,27 @@
                 <a href="#" class="personal-area__link">Личный кабинет</a>
             </div>
         </div>
-        <div class="header__main">
-            <div class="header__description">
-                <h1>Сервис составления исковых заявлений ProshuSud</h1>
-                <p class="header__text">
-                    Окажем вам помощь при оформлении искового заявления в суд
-                </p>
-                <button class="button" id="button_desktop">Получить консультацию онлайн</button>
-            </div>
-            <div class="header__photo">
-                <img src="./img/header-photo1x.png" alt="Охтень Алина Андреевна">
-            </div>
-            <div class="header__ceo-info">
-                <b>Охтень Алина Андреевна,</b> 
-                <p>руководитель проекта ProshuSud, 17 лет работы в судебной системе</p>
-            </div>
-        </div>
 
-        <div class="header__bg">
-
-        </div>
 
     </header>
     <main class="main">
-        <section class="about-us">
-            <div class="about-us__video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/imX_mtxa38A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="about-us__description">
-                <button class="button" id="button_mobile">Получить консультацию онлайн</button>
-                <p class="about-us__title title">
-                    Сервис создан для помощи оформления искового заявленияв онлайн режиме. 
-                </p>
-                <p class="about-us__text">
-                    В удобное время и в удобном месте, без посещения адвоката, вы сможете получить исковое заявление заполнив только данные, которые указаны в формах для заполнения информации.
-                </p>
-            </div>
-        </section>
-        <section class="our-services">
-            <p class="our-services__title title">Наши услуги</p>
-            <div class="our-services__list">
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-divorce"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Расторжение брака</p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-division-of-property"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Раздел имущества супругов</p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-alimony-order"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Приказ на взыскание алиментов</p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-recovery-of-alimony-for-minor-children"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Взыскание алиментов на несовершеннолетних детей</p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-recovery-of-alimony-for-adult-children"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Взыскание алиментов на совершеннолетних детей</p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-child-support-costs"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Дополнительные расходы на содержание ребенка</p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-disputing-paternity"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Исковое заявление об оспаривании отцовства</p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-communication-with-the-child"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Установление режима общения с ребенком</p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-travel-permit-for-a-child"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Разрешение на временный выезд ребенка</p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-card__icon">
-                        <svg class="icon">
-                            <use xlink:href="#service-deprivation-of-parental-rights"></use>
-                          </svg>
-                    </div>
-                    <div class="service-card__description">
-                        <p>Лишение родительских прав </p>
-                        <a href="#">Подробнее</a>
-                    </div>
-                </div>
-            </div>
+        <div class="header__menu-bg menu_mobile">
+            <ul class="header__menu">
+                <li class="menu__item"><a href="">Кто мы</a></li>
+                <li class="menu__item"><a href="">Как это работает</a></li>
+                <li class="menu__item"><a href="">Контакты</a></li>
+                <li class="menu__item" id="personal-area_mobile"><svg class="icon">
+                        <use xlink:href="#presonal-area"></use>
+                    </svg>
+                    <a href="#" class="personal-area__link">Личный кабинет</a></li>
+            </ul>
+        </div>
 
-        </section>
-        <section class="price">
-            <div class="price__description">
-                <p class="price__title title">
-                    Что входит в стоимость:
+        <section class="contacts">
+            <div class="contacts__form">
+                <p class="title">
+                    Получите консультацию онлайн
                 </p>
-                <p>При помощи Интернет сервиса ProshuSud вы сможете избежать массу затруднений и проблем. Мы поможем вам:</p>
-                <ul class="price__list">
-                    <li>Грамотно составить исковое заявление</li>
-                    <li>Осветить основные нюансы, главные обстоятельства</li>
-                    <li>Составить перечень соответствующих документов</li>
-                    <li>Определить суд, в который подается иск</li>
-                    <li>Рассчитать размер судебного сбора для вашей категории дела</li>
-                </ul>
-            </div>
-            <div class="price__img">
-
-            </div>
-        </section>
-        <section class="pros">
-            <div class="pros__img">
-
-            </div>
-            <div class="pros__description">
-                <p class="pros__title title">
-                    Преимущества сервиса ProshuSud
-                </p>
-                <p>Обращение в Интернет сервис ProshuSud будет вам выгодным во многих случаях:</p>
-                <div class="pros__cards">
-                    <div class="service-card-pros">
-                        <div class="service-card-pros__icon">
-                            <svg class="icon">
-                                <use xlink:href="#pros-qualification"></use>
-                              </svg>
-                        </div>
-                        <div class="service-card-pros__text">
-                            <p>Квалифицированная помощь —  специализация на семейном праве позволяет нам наиболее качественно оказывать помощь в этой области права</p>
-                        </div>
-                    </div>
-
-                    <div class="service-card-pros">
-                        <div class="service-card-pros__icon">
-                            <svg class="icon">
-                                <use xlink:href="#pros-full-info"></use>
-                              </svg>
-                        </div>
-                        <div class="service-card-pros__text">
-                            <p>Полная информация — мы предоставляем всю информацию по своей деятельности, дипломы, сертификаты, отзывы о нашей работе от клиентов.</p>
-                        </div>
-                    </div>
-                    <div class="service-card-pros">
-                        <div class="service-card-pros__icon">
-                            <svg class="icon">
-                                <use xlink:href="#pros-time"></use>
-                              </svg>
-                        </div>
-                        <div class="service-card-pros__text">
-                            <p>Экономия времени — не нужно добираться лично до офиса юриста, искать его по всему городу, особенно, если вы живете в маленьком городке или в деревне, где не хватает хороших специалистов.</p>
-                        </div>
-                    </div>
-                    <div class="service-card-pros">
-                        <div class="service-card-pros__icon">
-                            <svg class="icon">
-                                <use xlink:href="#pros-resposibility"></use>
-                              </svg>
-                        </div>
-                        <div class="service-card-pros__text">
-                            <p>Ответственность за работу – опыт, репутация и большая практика позволяют гарантировать 100% результат качества нашей правовой помощи.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-
-            </div>
-
-        </section>
-        <section class="stats">
-            <div class="stats__block">
-                <p class="stats__title">
-                    100%
-                </p>
-                <p class="stats__text">
-                    наших исковых заявлений принимает суд
-                </p>
-            </div>
-            <div class="stats__block">
-                <p class="stats__title">
-                    14 <span>сертификатов</span>
-                </p>
-                <p class="stats__text">
-                    подтверждающих профессиональную деятельность
-                </p>
-            </div>
-            <div class="stats__block">
-                <p class="stats__title">
-                    17 лет
-                </p>
-                <p class="stats__text">
-                    общего стажа юридической практики
-                </p>
-            </div>
-            <div class="stats__block">
-                <p class="stats__title">
-                    10 лет
-                </p>
-                <p class="stats__text">
-                    опыта работы судьей
-                </p>
-            </div>
-        </section>
-        <section class="reviews">
-            <div class="reviews__nav">
-                <p class="reviews__title">Отзывы клиентов</p>
-                <div class="reviews__btns">
-                    <div class="reviews__btn prev-btn">
-                        &#60;
-                    </div>
-                    <div class="reviews__btn next-btn">
-                        &#62;
-                    </div>
-                </div>
-            </div>
-            <div class="reviews__references">
-                <div class="reviews__reference-block">
-                    <p class="reviews__block-title">Иск по рассторжению брака</p>
-                    <p class="reviews__block-text">“Велика вдячність юристам юридичного сервісу ProshuSud, які склали для мене позов по розірванню шлюбу та поділ спільного майна подружжя. Завдяки кваліфіковано складеним позивним заявам не було затримок при розгляді справи, рішення прийняті на мою користь.”</p>
-                    <p class="reviews__block-info">Анастасия Врублева 18.10.2020</p>
-                </div>
-                <div class="reviews__reference-block">
-                    <p class="reviews__block-title">Взыскание алиментовна несовершеннолетних детей</p>
-                    <p class="reviews__block-text">“Большое спасибо за помощь. Бывший муж не помогал материально ребенку. На интернет сервисе ProshuSud мне в течении нескольких часов составили исковое заявление о взыскании алиментов, выслали инструкцию с дальнейшими разъяснениями, все было ясно и понятно, никаких трудностей подать иск не составило, теперь наконец то получаю алименты на ребенка.
-                        ”
-                        </p>
-                    <p class="reviews__block-info">Татьяна Силькова 24.05.2021</p>
-                </div>
-                <div class="reviews__reference-block">
-                    <p class="reviews__block-title">Иск по рассторжению брака</p>
-                    <p class="reviews__block-text">“Попытался составить иск о расторжении брака самостоятельно, но суд его не принял. После чего обрался на интернет сервис ProshuSud, в течении 2х часов мне прислали иск, суд принял иск без задержек и претензий.”</p>
-                    <p class="reviews__block-info">Владимир Рубанов 22.12.2021</p>
-                </div>
-                <div class="reviews__reference-block">
-                    <p class="reviews__block-title">Иск по рассторжению брака</p>
-                    <p class="reviews__block-text">“Попытался составить иск о расторжении брака самостоятельно, но суд его не принял. После чего обрался на интернет сервис ProshuSud, в течении 2х часов мне прислали иск, суд принял иск без задержек и претензий.”</p>
-                    <p class="reviews__block-info">Владимир Рубанов 22.12.2021</p>
-                </div>
-            </div>
-        </section>
-        <section class="faq">
-            <div class="faq__questions">
-                <p class="title">Частые вопросы</p>
-                <div class="faq__question" id="first-question">
-                    <div class="faq__btn">+</div>
-                    <p>Какую информацию необходимо предоставить, чтобы получить иск?</p>
-                    <div class="faq__answer">
-                        <p>Для получения иска следует выбрать необходимое вам исковое заявление. Заполнить все поля с данными сторон и раздел «Комментарии». Если вам какие-либо данные неизвестны, вы оставляете поле пустым. Наши юристы обработают данные и в кратчайшие сроки предоставят Вам сформированное исковое заявление.</p>
-                    </div>
-                </div>
-
-                <div class="faq__question">
-                    <div class="faq__btn">+</div>
-                    <p>Какие у меня гарантии, что я получу иск, который суд примет к рассмотрению?</p>
-                    <div class="faq__answer">
-                        <p>Для получения иска следует выбрать необходимое вам исковое заявление. Заполнить все поля с данными сторон и раздел «Комментарии». Если вам какие-либо данные неизвестны, вы оставляете поле пустым. Наши юристы обработают данные и в кратчайшие сроки предоставят Вам сформированное исковое заявление.</p>
-                    </div>
-                </div>
-                <div class="faq__question">
-                    <div class="faq__btn" id="last-btn">+</div>
-                <p>Можно ли в суде обойтись без адвоката?</p>
-                <div class="faq__answer">
-                    <p>Для получения иска следует выбрать необходимое вам исковое заявление. Заполнить все поля с данными сторон и раздел «Комментарии». Если вам какие-либо данные неизвестны, вы оставляете поле пустым. Наши юристы обработают данные и в кратчайшие сроки предоставят Вам сформированное исковое заявление.</p>
-                </div>
-                </div>
-                <div class="faq__answer">
-                    <p>Для получения иска следует выбрать необходимое вам исковое заявление. Заполнить все поля с данными сторон и раздел «Комментарии». Если вам какие-либо данные неизвестны, вы оставляете поле пустым. Наши юристы обработают данные и в кратчайшие сроки предоставят Вам сформированное исковое заявление.</p>
-                </div>
-               
-            </div>
-            <div class="faq__photo">
-               <img src="./img/faq-photo.png" alt="главый юрист прошу суд"> 
-            </div>
-        </section>
-        <section class="consultation">
-            <div class="consultation__info">
-                <p class="title">Получите консультацию онлайн</p>
-                <ul class="price__list">
-                    <li>Ознакомимся ближе с вашим вопросом</li>
-                    <li>Найдем возможные пути решения вопроса в кратчайшие сроки</li>
-                    <li>Оценим стоимость работ</li>
-                </ul>
-            </div>
-            <div class="consultation__form">
                 <form action="">
                     <label>Ваше имя<input type="text" placeholder="Иван" ></label>
                     <label>Ваша почта<input type="text" placeholder="mail@gmail.com"></label>
@@ -404,22 +75,12 @@
                     <button type="submit">Отправить</button>
                 </form>
             </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="footer__logo">
-            <p>ProshuSud</p>
-            <p>©2022 Мир Права<br>
-            Все права защищены.</p>
-        </div>
-        <ul class="footer__menu">
-            <li><a href="#">Кто мы</a></li>
-            <li><a href="#">Как это работает</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Личный кабинет</a></li>
-        </ul>
 
-        <div class="footer__social">
+            <div class="contacts__social">
+                <p class="title">
+                    Контакты
+                </p>
+                <ul>
                 <li><svg class="icon">
                     <use xlink:href="#email-icon"></use>
                   </svg><a href="#">ProshuSud@gmail.com</a></li>
@@ -437,15 +98,44 @@
 
         </div>
 
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__logo">
+            <p>ProshuSud</p>
+            <p>©2022 Мир Права<br>
+                Все права защищены.</p>
+        </div>
+        <ul class="footer__menu">
+            <li><a href="#">Кто мы</a></li>
+            <li><a href="#">Как это работает</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Личный кабинет</a></li>
+        </ul>
+
+        <div class="footer__social">
+            <li><svg class="icon">
+                    <use xlink:href="#email-icon"></use>
+                </svg><a href="#">ProshuSud@gmail.com</a></li>
+            <li><svg class="icon" viewBox="0 0 8 16">
+                    <use xlink:href="#fb-icon"></use>
+                </svg><a href="#">ProshuSud</a></li>
+            <li><svg class="icon">
+                    <use xlink:href="#tg-icon"></use>
+                </svg><svg class="icon">
+                    <use xlink:href="#whatsup-icon"></use>
+                </svg><svg class="icon">
+                    <use xlink:href="#viber-icon"></use>
+                </svg></li>
+            </ul>
+
+        </div>
+
         <p class="footer_rights-mobile">©2022 Мир Права<br>
             Все права защищены.</p>
     </footer>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="./script/menu.js"></script>
-    <script src="./script/accordion.js"></script>
-    <script src="./script/slider.js"></script>
-    <script type="text/javascript" src="./slick/slick.min.js"></script>
 </body>
 <svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 60" id="logo">
@@ -684,15 +374,15 @@
         <path d="M36.3455 34.1754H49.6843V35.5093H36.3455V34.1754Z" fill="white"></path>
         <path d="M38.3462 36.8431H47.6834V38.177H38.3462V36.8431Z" fill="white"></path>
     </symbol>
-    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" id="viber-icon">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" id="viber-icon">
         <path fill-rule="evenodd" clip-rule="evenodd"
             d="M15.403 2.633C13.708 0.936 11.454 0.001 9.053 0C4.105 0 0.077 4.027 0.075 8.977C0.075 10.559 0.488 12.103 1.273 13.465L0 18.116L4.759 16.867C6.071 17.582 7.547 17.959 9.049 17.96H9.053C14 17.96 18.028 13.933 18.03 8.983C18.03 6.585 17.098 4.33 15.403 2.633ZM9.053 16.445H9.05C7.711 16.444 6.398 16.085 5.252 15.404L4.98 15.242L2.156 15.983L2.909 13.23L2.732 12.948C1.985 11.76 1.591 10.387 1.591 8.977C1.593 4.863 4.94 1.516 9.056 1.516C11.049 1.517 12.922 2.294 14.331 3.704C15.739 5.115 16.515 6.989 16.514 8.983C16.512 13.097 13.165 16.445 9.053 16.445ZM13.146 10.856C12.921 10.743 11.819 10.201 11.613 10.126C11.408 10.051 11.259 10.014 11.109 10.238C10.959 10.462 10.529 10.967 10.398 11.117C10.267 11.267 10.136 11.285 9.912 11.173C9.688 11.061 8.965 10.824 8.108 10.06C7.441 9.465 6.991 8.731 6.86 8.506C6.729 8.281 6.846 8.16 6.959 8.048C7.06 7.948 7.183 7.786 7.295 7.655C7.407 7.524 7.444 7.431 7.519 7.281C7.594 7.131 7.557 7 7.5 6.888C7.444 6.775 6.995 5.671 6.808 5.222C6.627 4.787 6.442 4.845 6.304 4.839C6.174 4.833 6.024 4.831 5.875 4.831C5.725 4.831 5.482 4.887 5.276 5.111C5.07 5.336 4.491 5.878 4.491 6.982C4.491 8.086 5.295 9.153 5.407 9.303C5.519 9.453 6.989 11.718 9.239 12.69C9.775 12.921 10.193 13.059 10.518 13.163C11.055 13.334 11.544 13.309 11.931 13.252C12.362 13.188 13.258 12.71 13.445 12.186C13.632 11.662 13.632 11.213 13.576 11.119C13.52 11.025 13.369 10.968 13.146 10.856Z"
-            fill="white"></path>
+            ></path>
     </symbol>
-    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" id="whatsup-icon">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19" id="whatsup-icon">
         <path
             d="M9.77436 0C8.34936 0 4.82466 0.149707 2.94966 1.94971C1.59966 3.22471 1.07495 5.175 0.99995 7.5C0.84995 11.175 1.67436 13.4997 3.02436 14.6997C3.32436 14.9247 4.07495 15.5256 5.49995 15.9756V17.8506C5.49995 17.8506 5.49966 18.6 5.94966 18.75C6.02466 18.75 6.10024 18.8247 6.17524 18.8247C6.62524 18.8247 6.99936 18.2994 7.52436 17.7744C7.97436 17.2494 8.34966 16.875 8.57466 16.5H9.62495H10.2255C11.6505 16.5 15.1752 16.3503 17.0502 14.5503C18.4002 13.2003 18.9252 11.2494 18.9252 8.77441C19.0002 8.39941 19 7.95 19 7.5C18.9249 4.725 18.1005 2.85029 16.9755 1.80029C16.5255 1.42529 14.575 0 10.375 0H9.77436ZM9.62495 1.42529H10.1494H10.2255H10.3002C14.2752 1.42529 15.7752 2.70059 15.9252 2.85059C16.8252 3.60059 17.3502 5.25029 17.4252 7.42529V7.72559C17.5002 8.17559 17.5 8.54941 17.5 8.77441C17.4249 11.0244 16.9747 12.525 16.0747 13.5C14.4997 14.925 11.2002 15 10.3002 15H9.77436H9.69966H9.62495H8.87495L7.67524 16.3506L6.92524 17.1753L6.77436 17.3994C6.62436 17.5494 6.39995 17.8503 6.24995 17.9253V17.7744V14.5503C4.74995 14.1753 4.14995 13.65 3.99995 13.5C2.94995 12.6 2.34995 10.425 2.49995 7.5V6.75C2.64995 4.95 3.10054 3.75029 3.85054 2.92529C5.42554 1.50029 8.72495 1.42529 9.62495 1.42529ZM9.55024 3.07471C9.17524 3.07471 9.17524 3.60059 9.55024 3.60059C12.3252 3.60059 14.7255 5.475 14.7255 9C14.7255 9.375 15.25 9.375 15.25 9C15.25 5.175 12.7002 2.99971 9.55024 3.07471ZM6.57808 3.76904C6.4187 3.75029 6.25054 3.78691 6.10054 3.89941C5.35054 4.27441 4.59966 5.02559 4.82466 5.85059C4.82466 5.85059 4.97524 6.52471 5.80024 7.94971C6.25024 8.62471 6.62495 9.22529 6.99995 9.67529C7.37495 10.2003 7.97466 10.8 8.57466 11.25C9.77466 12.225 11.6505 13.2003 12.4755 13.4253C13.2255 13.6503 14.0502 12.8994 14.4252 12.1494C14.5752 11.8494 14.4997 11.475 14.1997 11.25C13.7497 10.8 13.0005 10.2756 12.4755 9.97559C12.1005 9.75059 11.65 9.9 11.5 10.125L11.125 10.5747C10.9749 10.7997 10.6005 10.8003 10.6005 10.8003C8.12554 10.1253 7.44966 7.57471 7.44966 7.57471C7.44966 7.57471 7.45024 7.27529 7.67524 7.05029L8.12495 6.67529C8.34995 6.52529 8.49936 6.07471 8.27436 5.69971C8.12436 5.47471 7.90024 5.02529 7.67524 4.80029C7.45024 4.50029 6.99995 3.97559 6.99995 3.97559C6.88745 3.86309 6.73745 3.78779 6.57808 3.76904ZM10.0747 4.57471C9.69966 4.49971 9.62495 5.10059 9.99995 5.10059C12.0999 5.25059 13.3005 6.67559 13.2255 8.47559C13.1505 8.85059 13.75 8.85059 13.75 8.47559C13.825 6.37559 12.4747 4.64971 10.0747 4.57471ZM10.3002 6C9.92524 5.925 9.92524 6.52441 10.3002 6.52441C11.2002 6.52441 11.6494 7.04971 11.6494 7.94971C11.7244 8.32471 12.25 8.32471 12.25 7.94971C12.1749 6.74971 11.5002 6 10.3002 6Z"
-            fill="white"></path>
+            ></path>
     </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 71"
         id="service-communication-with-the-child">
@@ -997,10 +687,10 @@
             d="M37.9842 18.7358L49.0846 25.5192C49.8763 26.0026 50.8929 25.8859 51.543 25.2275L54.1347 22.6358C54.3931 22.3775 54.3931 21.9524 54.1347 21.6941L52.8014 20.3608C52.5764 20.1358 52.2264 20.1025 51.9597 20.2774L50.3263 21.3608L47.2929 19.3358L48.868 17.2358C49.068 16.9691 49.043 16.6024 48.8096 16.3608L48.143 15.6941C47.943 15.4941 47.6263 15.4441 47.3763 15.5691L43.7013 17.4025L42.4596 16.6691C41.1512 15.8774 39.4678 16.0858 38.3845 17.1691L37.8595 17.6941C37.6012 17.9525 37.6012 18.3775 37.8595 18.6358C37.9012 18.6774 37.9429 18.7108 37.9845 18.7358L37.9842 18.7358ZM41.776 17.8107L43.326 18.7358C43.5177 18.8524 43.7593 18.8608 43.9677 18.7608L47.3094 17.0941L45.801 19.1024C45.576 19.3941 45.6427 19.8108 45.9343 20.0358C45.9427 20.0441 45.951 20.0524 45.9677 20.0608L49.9678 22.7275C50.1928 22.8775 50.4844 22.8775 50.7094 22.7275L52.2511 21.6942L52.7261 22.1692L50.6094 24.2859C50.3928 24.5025 50.0511 24.5442 49.7927 24.3859L39.4093 18.0441C40.0593 17.4524 41.026 17.3608 41.776 17.8108L41.776 17.8107Z"
             fill="white"></path>
     </symbol>
-    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 18" id="tg-icon">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 18" id="tg-icon">
         <path
             d="M18.6651 0.717064L0.935095 7.55406C-0.274905 8.04006 -0.267905 8.71506 0.713095 9.01606L5.26509 10.4361L15.7971 3.79106C16.2951 3.48806 16.7501 3.65106 16.3761 3.98306L7.8431 11.6841H7.84109L7.8431 11.6851L7.5291 16.3771C7.9891 16.3771 8.19209 16.1661 8.45009 15.9171L10.6611 13.7671L15.2601 17.1641C16.1081 17.6311 16.7171 17.3911 16.9281 16.3791L19.9471 2.15106C20.2561 0.912064 19.4741 0.351064 18.6651 0.717064Z"
-            fill="white"></path>
+            ></path>
     </symbol>
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1005 1899" id="bg-for-photo">
         <path
@@ -1014,65 +704,14 @@
             </linearGradient>
         </defs>
     </symbol>
-    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" id="fb-icon">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 16" id="fb-icon">
         <path
             d="M5.16427 15.4974V8.66738H7.46844L7.81094 5.99321H5.16427V4.28988C5.16427 3.51821 5.37927 2.98988 6.48677 2.98988H7.89011V0.605714C7.20761 0.532381 6.52094 0.497381 5.83427 0.499881C3.79761 0.499881 2.39927 1.74321 2.39927 4.02571V5.98821H0.110107V8.66238H2.40427V15.4974H5.16427Z"
-            fill="white"></path>
+            ></path>
     </symbol>
-    <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" id="email-icon">
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.58873 2.62829L9.99992 7.81612L17.4111 2.62829C17.2733 2.35577 16.9899 2.16667 16.6666 2.16667H3.33325C3.00995 2.16667 2.72655 2.35577 2.58873 2.62829ZM17.4999 4.60055L10.4778 9.51603C10.1909 9.71688 9.80897 9.71688 9.52203 9.51603L2.49992 4.60055V13C2.49992 13.4564 2.87682 13.8333 3.33325 13.8333H16.6666C17.123 13.8333 17.4999 13.4564 17.4999 13V4.60055ZM0.833252 3C0.833252 1.6231 1.95635 0.5 3.33325 0.5H16.6666C18.0435 0.5 19.1666 1.6231 19.1666 3V13C19.1666 14.3769 18.0435 15.5 16.6666 15.5H3.33325C1.95635 15.5 0.833252 14.3769 0.833252 13V3Z" fill="white"/>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16" id="email-icon">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M2.58873 2.62829L9.99992 7.81612L17.4111 2.62829C17.2733 2.35577 16.9899 2.16667 16.6666 2.16667H3.33325C3.00995 2.16667 2.72655 2.35577 2.58873 2.62829ZM17.4999 4.60055L10.4778 9.51603C10.1909 9.71688 9.80897 9.71688 9.52203 9.51603L2.49992 4.60055V13C2.49992 13.4564 2.87682 13.8333 3.33325 13.8333H16.6666C17.123 13.8333 17.4999 13.4564 17.4999 13V4.60055ZM0.833252 3C0.833252 1.6231 1.95635 0.5 3.33325 0.5H16.6666C18.0435 0.5 19.1666 1.6231 19.1666 3V13C19.1666 14.3769 18.0435 15.5 16.6666 15.5H3.33325C1.95635 15.5 0.833252 14.3769 0.833252 13V3Z"
+             />
     </symbol>
 </svg>
-
-<!-- 
-<div class="temp">
-    <svg class="icon">
-        <use xlink:href="#logo"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#pin-icon"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#presonal-area"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#pros-full-info"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#pros-qualification"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#pros-resposibility"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#pros-time"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-alimony-order"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-child-support-costs"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#viber-icon"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#whatsup-icon"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-communication-with-the-child"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-deprivation-of-parental-rights"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-disputing-paternity"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-division-of-property"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-divorce"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-recovery-of-alimony-for-adult-children"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-recovery-of-alimony-for-minor-children"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#service-travel-permit-for-a-child"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#tg-icon"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#bg-for-photo"></use>
-      </svg><svg class="icon">
-        <use xlink:href="#fb-icon"></use>
-      </svg>
-</div> -->
-
-
-
-</html>

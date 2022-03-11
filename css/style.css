@@ -800,7 +800,7 @@ body {
   color: white;
 }
 
-.consultation {
+.consultation, .contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -814,16 +814,16 @@ body {
   background: #f4f7ff;
 }
 
-.consultation__info {
+.consultation__info, .contacts__info {
   width: 50%;
   margin-bottom: 5em;
 }
 
-.consultation__form {
+.consultation__form, .contacts__form {
   width: 50%;
 }
 
-.consultation__form form {
+.consultation__form form, .contacts__form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,15 +833,15 @@ body {
           flex-direction: column;
 }
 
-.consultation__form form input, .consultation__form form label, .consultation__form form textarea {
+.consultation__form form input, .consultation__form form label, .consultation__form form textarea, .contacts__form form input, .contacts__form form label, .contacts__form form textarea {
   display: block;
 }
 
-.consultation__form form label {
+.consultation__form form label, .contacts__form form label {
   margin: 0 18% 15px 18%;
 }
 
-.consultation__form form input, .consultation__form form textarea {
+.consultation__form form input, .consultation__form form textarea, .contacts__form form input, .contacts__form form textarea {
   padding: 10px 15px;
   border: 1px solid #131F49;
   border-radius: 20px;
@@ -849,7 +849,7 @@ body {
   width: 100%;
 }
 
-.consultation__form form #upload-lable {
+.consultation__form form #upload-lable, .contacts__form form #upload-lable {
   display: inline-block;
   position: relative;
   width: 3em;
@@ -866,7 +866,7 @@ body {
   margin-top: 1rem;
 }
 
-.consultation__form form #upload-lable::after {
+.consultation__form form #upload-lable::after, .contacts__form form #upload-lable::after {
   position: absolute;
   width: 10em;
   content: "Прикрепить файл";
@@ -880,7 +880,7 @@ body {
   left: 3.5em;
 }
 
-.consultation__form input::-webkit-input-placeholder {
+.consultation__form input::-webkit-input-placeholder, .contacts__form input::-webkit-input-placeholder {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -890,7 +890,7 @@ body {
   color: #b7b8c4;
 }
 
-.consultation__form input:-ms-input-placeholder {
+.consultation__form input:-ms-input-placeholder, .contacts__form input:-ms-input-placeholder {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -900,7 +900,7 @@ body {
   color: #b7b8c4;
 }
 
-.consultation__form input::-ms-input-placeholder {
+.consultation__form input::-ms-input-placeholder, .contacts__form input::-ms-input-placeholder {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -910,7 +910,7 @@ body {
   color: #b7b8c4;
 }
 
-.consultation__form input::placeholder {
+.consultation__form input::placeholder, .contacts__form input::placeholder {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -920,7 +920,7 @@ body {
   color: #b7b8c4;
 }
 
-.consultation__form button {
+.consultation__form button, .contacts__form button {
   margin: 2em 0 0 18%;
   width: 9em;
   height: 3.5em;
@@ -992,6 +992,7 @@ body {
   width: 1.2em;
   height: 1.2em;
   margin-right: 1em;
+  fill: white;
 }
 
 .footer___rights-mobile {
@@ -1172,6 +1173,58 @@ body {
 .how-it-works #num03 {
   position: relative;
   top: 30px;
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts__social {
+  width: 50%;
+  padding: 0 0 0 10%;
+}
+
+.contacts__social svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 1em;
+  fill: #343434;
+}
+
+.contacts___rights-mobile {
+  display: none;
+}
+
+.contacts a {
+  text-decoration: none;
+  color: #343434;
+  font-weight: 700;
+}
+
+.contacts li {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+.contacts__form {
+  width: 50%;
+}
+
+.contacts__form form label {
+  margin: 0px 20% 15px 0%;
+}
+
+.contacts__form button {
+  margin: 1em 0 0 0%;
+}
+
+.contacts p {
+  margin-bottom: 1em;
 }
 
 @media (max-width: 1170px) {

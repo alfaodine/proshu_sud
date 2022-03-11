@@ -614,7 +614,7 @@ body{
         }
 
     }
-    .consultation{
+    .consultation, .contacts{
         @include flex_content(space-between, center);
         padding: 3em calc(50vw - 585px) 6em;
         background: rgb(244, 247, 255);
@@ -716,6 +716,7 @@ body{
                 width: 1.2em;
                 height: 1.2em;
                 margin-right: 1em;
+                fill: rgb(255, 255, 255);
             }
         }
         &___rights-mobile{
@@ -849,4 +850,44 @@ body{
         top: 30px;
     }
 }
+// ---------------for contact page-----------
+.contacts{
+    display: flex;
+    align-items: center;
+    &__social{
+        width: 50%;
+        padding: 0 0 0 10%;
+        & svg{
+            width: 1.2em;
+            height: 1.2em;
+            margin-right: 1em;
+            fill: $color_black;
+        }
+    }
+    &___rights-mobile{
+        display: none;
+    }
+    & a{
+        text-decoration: none;
+        color:$color_black;
+        font-weight: 700;
+    }
+    & li{
+        list-style: none;
+        margin-bottom: 1em;
+    }
+    &__form{
+        width: 50%;
+        & form label {
+            margin: 0px 20% 15px 0%;
+        }
+        & button{
+            margin: 1em 0 0 0%;
+        }
+    }
+    & p{
+        margin-bottom: 1em;
+    }
+}
+
 @import "media-quer";
