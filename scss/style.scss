@@ -795,11 +795,58 @@ body{
 // ---------------for how-to page-----------
 
 .how-it-works{
-    padding: 0 calc(50vw - 585px);
+    padding: 0 calc(50vw - 585px); 
     &__title{
         @include font_style (Prata, 38px, 400, 46px);
         text-align: center;
         margin: 50px 0;
+    }
+    &__instruction{
+        display: flex;  
+        justify-content: space-between; 
+        margin-bottom: 7em;
+    }
+    &__block{
+        width: 33%;
+        position: relative;
+        z-index: -1;
+    }
+    .block{
+        &__title{
+            text-align: center;
+            @include font_style (Prata, 96px, 400, 104px);
+            position: relative;
+        }
+        &__info{
+            background: #FFFFFF;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            width: 93%;
+            height: 17em;
+            margin: 0 auto;
+            & img{
+                width: 4.5em;
+                height: auto;
+                margin: 4% 4% 3%;
+            }
+            & p:first-of-type{
+                margin: 0 4%;
+                @include font_style (Open Sans, 18px, 700, 26px);
+                color: rgb(19, 31, 73);
+            }
+            & p:last-of-type{
+                margin: 4%;
+                @include font_style (Open Sans, 14px, 400, 22px);
+            }
+        }
+    }
+    #num01{
+        position: relative;
+        top: -30px;
+    }
+    #num03{
+        position: relative;
+        top: 30px;
     }
 }
 @import "media-quer";

@@ -337,6 +337,28 @@
             margin-top: 30px;
         }
     }
+    // -------------how-it-works page
+    .how-it-works{
+        &__instruction{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__block{
+            width: 65%;
+        }
+        #num01{
+            position: relative;
+            top: -35px;
+        }
+        #num02{
+            position: relative;
+            top: -35px;
+        }
+        #num03{
+            position: relative;
+            top: -35px;
+        }
+    }
 }
 @media (max-width: 576px){
 
@@ -355,6 +377,12 @@
         }
         & img{
             width: 100%;
+        }
+    }
+       // -------------how-it-works page
+       .how-it-works{
+        &__block{
+            width: 95%;
         }
     }
 }

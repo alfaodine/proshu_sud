@@ -1100,6 +1100,80 @@ body {
   margin: 50px 0;
 }
 
+.how-it-works__instruction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 7em;
+}
+
+.how-it-works__block {
+  width: 33%;
+  position: relative;
+  z-index: -1;
+}
+
+.how-it-works .block__title {
+  text-align: center;
+  font-family: Prata;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 104px;
+  color: #343434;
+  position: relative;
+}
+
+.how-it-works .block__info {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 93%;
+  height: 17em;
+  margin: 0 auto;
+}
+
+.how-it-works .block__info img {
+  width: 4.5em;
+  height: auto;
+  margin: 4% 4% 3%;
+}
+
+.how-it-works .block__info p:first-of-type {
+  margin: 0 4%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #343434;
+  color: #131f49;
+}
+
+.how-it-works .block__info p:last-of-type {
+  margin: 4%;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #343434;
+}
+
+.how-it-works #num01 {
+  position: relative;
+  top: -30px;
+}
+
+.how-it-works #num03 {
+  position: relative;
+  top: 30px;
+}
+
 @media (max-width: 1170px) {
   .button {
     padding: 1em 1em;
@@ -1453,6 +1527,30 @@ body {
     display: none;
     margin-top: 30px;
   }
+  .how-it-works__instruction {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .how-it-works__block {
+    width: 65%;
+  }
+  .how-it-works #num01 {
+    position: relative;
+    top: -35px;
+  }
+  .how-it-works #num02 {
+    position: relative;
+    top: -35px;
+  }
+  .how-it-works #num03 {
+    position: relative;
+    top: -35px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1474,6 +1572,9 @@ body {
   }
   .who-we-are img {
     width: 100%;
+  }
+  .how-it-works__block {
+    width: 95%;
   }
 }
 /*# sourceMappingURL=style.css.map */
