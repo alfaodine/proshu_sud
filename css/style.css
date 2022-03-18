@@ -936,6 +936,121 @@ body {
   color: white;
 }
 
+.form {
+  width: 50%;
+  margin: 10% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form input, .form label, .form textarea {
+  display: block;
+}
+
+.form input label, .form label label, .form textarea label {
+  margin: 0 18% 15px 18%;
+}
+
+.form input input, .form input textarea, .form label input, .form label textarea, .form textarea input, .form textarea textarea {
+  padding: 10px 15px;
+  border: 1px solid #131F49;
+  border-radius: 20px;
+  resize: none;
+  width: 100%;
+}
+
+.form input #upload-lable, .form label #upload-lable, .form textarea #upload-lable {
+  display: inline-block;
+  position: relative;
+  width: 3em;
+  height: 3em;
+  background: #C5232D;
+  background-image: url(../img/svg/pin-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.form input #upload-lable::after, .form label #upload-lable::after, .form textarea #upload-lable::after {
+  position: absolute;
+  width: 10em;
+  content: "Прикрепить файл";
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
+  top: 0.8em;
+  left: 3.5em;
+}
+
+.form input::-webkit-input-placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
+  color: #b7b8c4;
+}
+
+.form input:-ms-input-placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
+  color: #b7b8c4;
+}
+
+.form input::-ms-input-placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
+  color: #b7b8c4;
+}
+
+.form input::placeholder {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
+  color: #b7b8c4;
+}
+
+.form button {
+  margin: 2em 0 0 18%;
+  width: 9em;
+  height: 3.5em;
+  border: 0;
+  border-radius: 10px;
+  background: #c5232d;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color: #343434;
+  color: white;
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1227,6 +1342,90 @@ body {
   margin-bottom: 1em;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background: #f4f7ff;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: #c5232d;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #f4f7ff;
+  color: white;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #f4f7ff;
+  color: white;
+}
+
 @media (max-width: 1170px) {
   .button {
     padding: 1em 1em;
@@ -1343,6 +1542,9 @@ body {
   }
   .consultation__form form label {
     margin: 0px 3% 15px 9%;
+  }
+  .contacts__form form label {
+    margin: 0 0 15px 0%;
   }
 }
 
@@ -1603,6 +1805,20 @@ body {
   .how-it-works #num03 {
     position: relative;
     top: -35px;
+  }
+  .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 3em 10%;
+  }
+  .contacts__form {
+    width: 100%;
+  }
+  .contacts__social {
+    width: 100%;
+    padding: 0 0 3em;
   }
 }
 

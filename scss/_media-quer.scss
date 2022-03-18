@@ -116,6 +116,13 @@
     .consultation__form form label {
     margin: 0px 3% 15px 9%;
 }
+
+.contacts{
+    &__form form label {
+    margin: 0 0 15px 0%;
+}
+}
+
 }
 @media (max-width: 768px){
     // ----------------menu---------
@@ -357,6 +364,17 @@
         #num03{
             position: relative;
             top: -35px;
+        }
+    }
+    .contacts{
+        flex-direction: column-reverse;
+        padding: 3em 10%;
+        &__form{
+            width: 100%;
+        }
+        &__social{
+            width: 100%;
+            padding: 0 0 3em;
         }
     }
 }

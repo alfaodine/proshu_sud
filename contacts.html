@@ -66,11 +66,11 @@
                 <p class="title">
                     Получите консультацию онлайн
                 </p>
-                <form action="">
-                    <label>Ваше имя<input type="text" placeholder="Иван" ></label>
-                    <label>Ваша почта<input type="text" placeholder="mail@gmail.com"></label>
+                <form action="https://formsubmit.co/ustroistva1@gmail.com" method="POST">
+                    <label>Ваше имя<input type="text" name="name" placeholder="Иван" ></label>
+                    <label>Ваша почта<input type="text" name="email" placeholder="mail@gmail.com"></label>
                     <label>Опишите суть проблемы<textarea name="comment" cols="40" rows="5"></textarea></label>
-                    <input type="file" id="upload" style="display:none"/>
+                    <input type="file" name="file" id="upload" style="display:none"/>
                     <label id="upload-lable"for="upload"></label>
                     <button type="submit">Отправить</button>
                 </form>
