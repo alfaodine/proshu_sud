@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -19,9 +19,11 @@
 <body>
     <header class="header">
         <div class="header__top">
+            <a href="./index.html">
             <svg class="icon logo-icon">
                 <use xlink:href="#logo"></use>
             </svg>
+        </a>
             <!-- burger menu  -->
             <button class="nav-toggle">
                 <span class="bar-top"></span>
@@ -30,13 +32,13 @@
             </button>
             <div class="header__menu-bg">
                 <ul class="header__menu">
-                    <li class="menu__item"><a href="">Кто мы</a></li>
-                    <li class="menu__item"><a href="">Как это работает</a></li>
-                    <li class="menu__item"><a href="">Контакты</a></li>
+                    <li class="menu__item"><a class="underline" href="./about-us.html">Кто мы</a></li>
+                    <li class="menu__item"><a class="underline" href="./how-to.html">Как это работает</a></li>
+                    <li class="menu__item"><a class="underline" href="./contacts.html">Контакты</a></li>
                     <li class="menu__item" id="personal-area_mobile"><svg class="icon">
                             <use xlink:href="#presonal-area"></use>
                         </svg>
-                        <a href="#" class="personal-area__link">Личный кабинет</a></li>
+                        <a href="./login.html" class="underline personal-area__link">Личный кабинет</a></li>
 
                 </ul>
             </div>
@@ -44,7 +46,7 @@
                 <svg class="icon">
                     <use xlink:href="#presonal-area"></use>
                 </svg>
-                <a href="#" class="personal-area__link">Личный кабинет</a>
+                <a href="./login.html" class="personal-area__link">Личный кабинет</a>
             </div>
         </div>
         <div class="header__main">
@@ -66,14 +68,15 @@
                         </div> -->
                         <div class="modal-body">
                             <span class="close">&times;</span>
-                            <p>Some text in the Modal Body</p>
-                            <p>Some other text...</p>
-                            <form class="form" action="">
+                            <!-- <p>Some text in the Modal Body</p>
+                            <p>Some other text...</p> -->
+                            <form class="form">
+                                <p>Стоимость консультации <span> 500 грн.</span> Если после консультации понадобятся дополнительные услуги, то эта сумма будет включена в стоимость услуги.</p>
                                 <label>Ваше имя<input type="text" placeholder="Иван" ></label>
-                                <label>Ваша почта<input type="text" placeholder="mail@gmail.com"></label>
+                                <label>Ваша номер телефона<input type="text" placeholder="0508855888"></label>
                                 <label>Опишите суть проблемы<textarea name="comment" cols="40" rows="5"></textarea></label>
                                 <input type="file" id="upload" style="display:none"/>
-                                <label id="upload-lable"for="upload"></label>
+                                <label id="upload-lable" for="upload"></label>
                                 <button type="submit">Оплатить</button>
                             </form>
                         </div>
@@ -103,7 +106,7 @@
         <section class="about-us">
             <div class="about-us__video">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/imX_mtxa38A"
-                    title="YouTube video player" frameborder="0"
+                    title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen></iframe>
             </div>
@@ -129,7 +132,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Расторжение брака</p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/divorce.html">Подробнее</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -140,7 +143,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Раздел имущества супругов</p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/service-division-of-property.html">Подробнее</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -151,7 +154,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Приказ на взыскание алиментов</p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/service-alimony-order.html">Подробнее</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -162,7 +165,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Взыскание алиментов на несовершеннолетних детей</p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/service-recovery-of-alimony-for-minor-children.html">Подробнее</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -173,7 +176,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Взыскание алиментов на совершеннолетних детей</p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/service-recovery-of-alimony-for-adult-children.html">Подробнее</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -184,7 +187,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Дополнительные расходы на содержание ребенка</p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/service-child-support-costs.html">Подробнее</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -195,7 +198,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Исковое заявление об оспаривании отцовства</p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/service-disputing-paternity.html">Подробнее</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -206,7 +209,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Установление режима общения с ребенком</p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/communication-with-the-child.html">Подробнее</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -217,7 +220,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Разрешение на временный выезд ребенка</p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/travel-permit-for-a-child.html">Подробнее</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -228,7 +231,7 @@
                     </div>
                     <div class="service-card__description">
                         <p>Лишение родительских прав </p>
-                        <a href="#">Подробнее</a>
+                        <a href="./services_pages/deprivation-of-parental-rights.html">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -389,11 +392,11 @@
                     <p class="reviews__block-info">Владимир Рубанов 22.12.2021</p>
                 </div>
                 <div class="reviews__reference-block">
-                    <p class="reviews__block-title">Иск по рассторжению брака</p>
-                    <p class="reviews__block-text">“Попытался составить иск о расторжении брака самостоятельно, но суд
-                        его не принял. После чего обрался на интернет сервис ProshuSud, в течении 2х часов мне прислали
-                        иск, суд принял иск без задержек и претензий.”</p>
-                    <p class="reviews__block-info">Владимир Рубанов 22.12.2021</p>
+                    <p class="reviews__block-title">Иск о лишении родительских прав</p>
+                    <p class="reviews__block-text">“Протягом кількох годин я отримала позов про позбавлення батьківських прав батька дитини,
+                         давно збиралася це зробити, але то часу не було, то грошей. На  интернет сервисі ProshuSud все склалося як
+                          найкраще, і виїжджати нікуди не було потреби і кошти заплатила адекватні”</p>
+                    <p class="reviews__block-info">Оксана Семенко 11.03.2022</p>
                 </div>
             </div>
         </section>
@@ -449,17 +452,19 @@
                 <ul class="price__list">
                     <li>Ознакомимся ближе с вашим вопросом</li>
                     <li>Найдем возможные пути решения вопроса в кратчайшие сроки</li>
-                    <li>Оценим стоимость работ</li>
+                    <li>Стоимость консультации <span>500 грн</span>. Если после консультации понадобятся дополнительные услуги, то эта сумма будет включена в стоимость услуги.</li>
                 </ul>
+
             </div>
             <div class="consultation__form">
-                <form action="">
-                    <label>Ваше имя<input type="text" placeholder="Иван"></label>
-                    <label>Ваша почта<input type="text" placeholder="mail@gmail.com"></label>
-                    <label>Опишите суть проблемы<textarea name="comment" cols="40" rows="5"></textarea></label>
-                    <input type="file" id="upload" style="display:none" />
+                <form>
+                    <label>Ваше имя<input id="your_name" type="text" placeholder="Иван"></label>
+                    <label>Ваша номер телефона<input type="text" placeholder="0508855888"></label>
+                    <label>Ваше email<input id="your_email" type="text" placeholder="mail@mail.com"></label>
+                    <label>Опишите суть проблемы<textarea id="your_text" name="comment" cols="40" rows="5"></textarea></label>
+                    <input type="file" accept="application/pdf" id="upload" style="display:none" />
                     <label id="upload-lable" for="upload"></label>
-                    <button id="invoice" accept="application/pdf" type="submit">Отправить</button>
+                    <button id="invoice" type="submit">Оплатить</button>
                 </form>
             </div>
         </section>
@@ -471,12 +476,13 @@
                 Все права защищены.</p>
         </div>
         <ul class="footer__menu">
-            <li><a href="#">Кто мы</a></li>
-            <li><a href="#">Как это работает</a></li>
-            <li><a href="#">Контакты</a></li>
-            <li><a href="#">Личный кабинет</a></li>
+            <li><a href="./about-us.html">Кто мы</a></li>
+            <li><a href="./how-to.html">Как это работает</a></li>
+            <li><a href="./contacts.html">Контакты</a></li>
+            <li><a href="./login.html">Личный кабинет</a></li>
         </ul>
 
+        <ul>
         <div class="footer__social">
             <li><svg class="icon">
                     <use xlink:href="#email-icon"></use>

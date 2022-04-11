@@ -20,6 +20,9 @@
             margin-top: 90px;
         }
     }
+    .payment, .not-found{
+        padding: 5em 10px;
+    }
 
 }
 @media (max-width: 992px){
@@ -377,8 +380,20 @@
             padding: 0 0 3em;
         }
     }
+
+    .payment, .not-found{
+        align-items: center;
+        &__info{
+            flex-shrink: 0;
+            width: 60vw;
+          }
+        & img{
+            width: 75%;
+        }
+    }
 }
 @media (max-width: 576px){
+
 
     .service-card-pros{
         width: 100%;
@@ -397,10 +412,52 @@
             width: 100%;
         }
     }
+
+    .stats{
+        &__title{
+            & span {
+                font-size: 16px;
+            }
+        }
+    }
+    
        // -------------how-it-works page
        .how-it-works{
         &__block{
             width: 95%;
         }
+    }
+    .login{
+        padding: 30px 15px 50px;
+    }
+
+    .modal-body{
+        & .form{
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 340px) {
+    .header{
+        & h1{
+            margin-top: 0px;
+            font-size: 28px;
+        }
+        &__ceo-info{
+            left: 20px;
+            bottom: 20px;
+        }
+    }
+
+    .stats{
+        &__text{
+            font-size: 12px;
+        }
+    }
+    #button_mobile{
+        font-size: 12px;
+        padding: 1em 0.5em;
+        width: 100%;
     }
 }

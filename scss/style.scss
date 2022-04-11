@@ -77,7 +77,7 @@ body{
         display: inline-block;
     }
     
-    & a:hover::after {
+    & .underline:hover::after {
         content: "";
         display: block;
         position: absolute;
@@ -328,6 +328,7 @@ body{
         &__video{
             padding: 50px 0;
             & iframe{
+                border: 0;
                 filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.1));
                 border-radius: 20px;    
             }
@@ -435,6 +436,10 @@ body{
             margin-left: 20px;
             & li:not(:last-child){
                 margin-bottom: 10px;
+            }
+            & span{
+                color: $color_red; 
+                font-weight: 700;
             }
         }
     }
@@ -745,6 +750,15 @@ body{
         @include font_style (Open Sans, 14px, 700, 24px);
         color: rgb(255, 255, 255);
     }
+
+    & .error-log{
+        display: none;
+    }
+    & .error-log-show{
+        display: block;
+        color: $color_red;
+        padding-top: 10px;
+    }
     }
 
 
@@ -1012,7 +1026,7 @@ body{
   .close:focus {
     color: #000;
     text-decoration: none;
-    cursor: pointer;
+    cursor: pointer; 
   }
   
   .modal-header {
@@ -1021,12 +1035,166 @@ body{
     color: white;
   }
   
-  .modal-body {padding: 2px 16px;}
+  .modal-body {
+      padding: 2px 16px;
+      & p{
+        margin-bottom: 1em;
+    }
+    & span {
+        color: $color_red;
+        font-weight: 700; 
+    }
+    }
   
   .modal-footer {
     padding: 2px 16px;
     background-color: rgb(244, 247, 255);
     color: white;
+  }
+
+  //------------------payment / not found page------------
+
+  .payment, .not-found{
+      display: flex;
+      padding: 5em calc(50vw - 585px);
+      &__text{
+          margin: 2em 0;
+      }
+      & img {
+          width: auto;
+          height: 100%;
+      }
+  }
+  .not-found{
+      & p{
+          width: 80%;
+      }
+  }
+
+  //---------------------login page-------------
+  .login{
+    padding: 50px calc(50vw - 240px) 10px;
+    background: rgb(244, 247, 255); 
+      & h1{
+        @include font_style (Prata, 38px, 400, 46px);
+        text-align: center;
+      }
+      & .form {
+          width: 100%;
+          & button{
+            margin: 2em auto;
+          }
+      }
+      & a{
+        text-align: center;
+        text-decoration: none;
+        color: $color_black;
+        margin-bottom: 0.5em;
+    }
+  }
+
+  //------------service-page------
+
+  .service-page{
+    padding: 50px calc(50vw - 585px) 10%;
+    display: flex;
+    &__text{
+        margin-top: 7%;
+        & h1{
+            @include font_style (Prata, 38px, 400, 46px);
+            margin-bottom: 30px;
+        }
+        & p{
+            margin-bottom: 20px;
+        }
+        & span{
+            @include font_style (Open Sans, 18px, 700, 26px); 
+            color: $color_red;
+        }
+        width: 50%;
+        margin-right: 10%;
+    }
+    &__form{
+        & p{
+            @include font_style (Prata, 28px, 400, 36px);
+        }
+        width: 50%;
+        & .form{
+            width: 100%;
+        }
+        & button {
+            margin: 2em 0;
+        }
+        & input{
+            margin-bottom: 1em;
+        }
+    }
+  }
+
+  //----------------personal page-----
+
+  .personal{
+    @include flex_content(center, flex-start);
+    padding: 0 calc(50vw - 585px);
+    background: rgb(244, 247, 255);
+    padding-top: 3em;
+    &__info{
+        width: 50%;
+    }
+    &__docs{
+        width: 50%;
+        padding-left: 10%;
+    }
+    & form{
+        width: 100%;
+        padding-right: 10%;
+    }
+    .doc{
+        @include flex_content(flex-start, center);
+        & img{
+            margin: 0 1em 1em 0;
+        } 
+    }
+  }
+
+  .our-services_personal{
+      margin-bottom: 2em;
+      & .service-card{
+          flex-direction: column;
+          text-align: center;
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+      }
+      & a{
+        display: inline-block;
+        margin: 1em;
+        padding: 1em 2em;
+        background: $color_red;
+        box-shadow: 0px 2px 8px rgba(27, 32, 50, 0.08);
+        border: 0px;
+        border-radius: 10px;
+        @include font_style (Open Sans, 14px, 700, 22px);
+        color: rgb(255, 255, 255);
+      }
+      & a::after{
+          display: none;
+      }
+      & .title{
+        text-align: left;
+      }
+  }
+  //----------------Sign up page--------
+  .sign_up{
+      & button{
+        width: 13em;
+      }
+      & a{
+          text-align: center;
+          text-decoration: none;
+          color: $color_black;
+      }
+      & input{
+          margin-bottom: 0.6em;
+      }
   }
 
 @import "media-quer";

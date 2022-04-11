@@ -3,6 +3,7 @@ let menu = document.querySelector('.header__menu');
 let menuBg = document.querySelector('.header__menu-bg');
 let menuBgPages = document.querySelector('.menu_mobile');
 let presonalArea = document.querySelector('.header__personal-area');
+let hh = 'hello';
 
 nav.addEventListener('click', function(){
     // menuBg.setAttribute("style","height:500px");

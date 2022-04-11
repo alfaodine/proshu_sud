@@ -4,7 +4,7 @@ questionsBlock.addEventListener('click', (e)=>{
     let questionBlock = e.target.parentElement;
     let prevQuestionBlock = questionBlock.previousSibling.previousSibling;
 
-    if (answer.style.maxHeight && (e.target.parentElement.classList.contains('faq__question'))) {
+    if (answer.style.maxHeight && (e.target.parentElement.classList.contains('faq__question')) && (!e.target.classList.contains('faq__questions'))) {
         answer.style.maxHeight = null;
         questionBlock.classList.toggle('active-answer');
 
@@ -14,7 +14,7 @@ questionsBlock.addEventListener('click', (e)=>{
             prevQuestionBlock.style.borderBottom = '1px solid rgb(197, 35, 45)';
         }
 
-      } else if (!e.target.classList.contains('title')) {
+      } else if (!e.target.classList.contains('title') && (!e.target.classList.contains('faq__questions'))) {
         answer.style.maxHeight = (answer.scrollHeight + 35) + "px";
         prevQuestionBlock.style.borderBottom = 'none';
         questionBlock.classList.toggle('active-answer');

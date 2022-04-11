@@ -1,4 +1,7 @@
-const button = document.querySelector("#invoice");
+const button = document.querySelector("#invoice"),
+      userName = document.querySelector('#your_name'),
+      userEmail = document.querySelector('#your_email'),
+      userText = document.querySelector('#your_text');
 
 function sendEmail (e) {
     e.preventDefault();
@@ -13,13 +16,18 @@ function sendEmail (e) {
         },
         body: JSON.stringify({
           senderName: "ustroistva1@gmail.com",
-          senderEmail: "yatskevych.andrii@gmail.com",
-          message: "HELLO WORLD THIS IS FROM REACT APP test test.",
+          senderEmail: `${userEmail.value}`,
+          message: `${userText.value}`,
         //   base64Data: base64,
-          date: new Date(),
+          // date: new Date(),
         //   fileName: "TEST_FILE_NAME",
         })
     })
+}
+
+function getFieldsValue (e){
+  e.preventDefault();
+userName.value, userEmail.value, userText.value
 }
 
 button.addEventListener('click', sendEmail)
