@@ -51,6 +51,17 @@
 
     </header>
     <main class="main">
+        <div class="header__menu-bg menu_mobile">
+            <ul class="header__menu">
+                <li class="menu__item"><a href="../about-us.html">Кто мы</a></li>
+                <li class="menu__item"><a href="../how-to.html">Как это работает</a></li>
+                <li class="menu__item"><a href="../contacts.html">Контакты</a></li>
+                <li class="menu__item" id="personal-area_mobile"><svg class="icon">
+                        <use xlink:href="#presonal-area"></use>
+                    </svg>
+                    <a href="../login.html" class="personal-area__link">Личный кабинет</a></li>
+            </ul>
+        </div>
         <section class="service-page">
             <div class="service-page__text">
                 <h1>Расторжение брака</h1>
@@ -61,25 +72,122 @@
                 <p class="text">
                     Согласие на расторжение брака
                     второго супруга НЕ НУЖНО. Если супруги имеют несовершеннолетних
-                     детей или один из супругов НЕ желает добровольно расторгнуть брак в
-                     органах ЗАГС, необходимо обратиться в суд с иском о расторжении брака.
+                    детей или один из супругов НЕ желает добровольно расторгнуть брак в
+                    органах ЗАГС, необходимо обратиться в суд с иском о расторжении брака.
                 </p>
                 <p class="text">
-                    Стоимость услуги: <span>999 грн.</span>  
+                    Стоимость услуги: <span>999 грн.</span>
                 </p>
                 <p class="text">
                     Для заказа искового заявления необходимо пройти регистрацию.
                 </p>
             </div>
             <div class="service-page__form">
-                <p>Заполните данные истца</p>
-                <form class="form">
-                    <label>Ваше имя<input type="text" placeholder="Иван"></label>
-                    <label>Ваша почта<input type="text" placeholder="mail@gmail.com"></label>
-                    <label>Опишите суть проблемы<textarea name="comment" cols="40" rows="5"></textarea></label>
-                    <input type="file" id="upload" style="display:none" />
-                    <label id="upload-lable" for="upload"></label>
-                    <button type="submit">Оплатить</button>
+                <form class="form" id="regForm">
+
+                    <div class="tab">
+                        <div class="register-form">
+                            <p>Регистрация</p>
+                            <label>Фамилия<input type="text" id="register_lastname" placeholder="Иванов"
+                                    required></label>
+                            <label>Имя<input type="text" id="register_name" placeholder="Иван" required></label>
+                            <label>Отчество<input type="text" id="register_midname" placeholder="Иванович"
+                                    required></label>
+                            <label>Email<input type="text" id="register_email" placeholder="mail@gmail.com"
+                                    required></label>
+                            <label>Пароль<input type="text" id="register_password" placeholder="********"
+                                    required></label>
+                            <label>Повторить пароль<input type="text" id="register_password2" placeholder="********"
+                                    required></label>
+                            <p class="error-log"></p>
+                        </div>
+                        <div class="personal-info-form" style="display: none;">
+                            <p>Заполните данные истца</p>
+                            <label>Фамилия<input type="text" id="personal_lastname" placeholder="Иванов"
+                                    required></label>
+                            <label>Имя<input type="text" id="personal_name" placeholder="Иван" required></label>
+                            <label>Отчество<input type="text" id="personal_midname" placeholder="Иванович"
+                                    required></label>
+                            <label>Email<input type="text" id="personal_email" placeholder="mail@gmail.com"
+                                    required></label>
+                            <p class="error-log"></p>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <p>Заполните данные истца</p>
+                        <label>Дата рождения<input type="date" placeholder="14.05.1972"></label>
+                        <label>Адрес регистрации<input type="text"
+                                placeholder="11002, м. Київ, вул. Мальовнича, 11/25"></label>
+                        <label>Идентификационный код<input type="text" placeholder="12345678"></label>
+                        <label>Телефон<input type="text" placeholder="0505553344"></label>
+                    </div>
+
+                    <div class="tab">
+                        <p>Заполните данные ответчика</p>
+                        <label>Фамилия<input type="text" placeholder="Иванов" required></label>
+                        <label>Имя<input type="text" placeholder="Иван" required></label>
+                        <label>Отчество<input type="text" placeholder="Иванович" required></label>
+                        <label>Адрес регистрации<input type="text"
+                                placeholder="11002, м. Київ, вул. Мальовнича, 11/25"></label>
+                        <label>Идентификационный код<input type="text" placeholder="12345678"></label>
+                        <label>Телефон<input type="text" placeholder="0505553344"></label>
+                        <label>Email<input type="text" placeholder="mail@gmail.com" required></label>
+                    </div>
+
+                    <div class="tab">
+                        <p>Заполните данные о браке</p>
+                        <label>Дата рождения<input type="date" placeholder="14.05.2005"></label>
+                        <label>Государственный орган, зарегистрировавший брак<input type="text"
+                                placeholder="Название органа" required></label>
+                        <label>Номер актовой записи<input type="text" placeholder="11122233" required></label>
+                        <div class="radio-btn">
+                            <label>Дети в браке</label>
+                            <div class="radio-block">
+                                <input type="radio" id="contactChoice1" name="contact" value="да" checked>
+                                <label for="contactChoice1">Да</label>
+                            </div>
+                            <div class="radio-block">
+                                <input type="radio" id="contactChoice2" name="contact" value="нет">
+                                <label for="contactChoice2">Нет</label>
+                            </div>
+                        </div>
+
+                        <label>ФИО и дата рождения ребенка (детей)<textarea name="comment" cols="40"
+                                rows="5"></textarea></label>
+                                <div class="radio-btn">
+                                    <label>Сменить фамилию на добрачную</label>
+                                    <div class="radio-block">
+                                        <input type="radio" id="contactChoice1" name="contact1" value="да" checked>
+                                        <label for="contactChoice1">Да</label>
+                                    </div>
+                                    <div class="radio-block">
+                                        <input type="radio" id="contactChoice2" name="contact1" value="нет">
+                                        <label for="contactChoice2">Нет</label>
+                                    </div>
+                                </div>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="custom-checkbox" id="happy" name="happy" value="да">
+                                    <label for="happy">Взыскать с ответчика судебный сбор</label>
+                                </div>
+                    </div>
+
+                    <div style="overflow:auto;">
+                        <div class="btn-group">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Назад</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Далee</button>
+                        </div>
+                    </div>
+
+                    <!-- Circles which indicates the steps of the form: -->
+                    <div style="text-align:center;margin-top:40px;">
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                        <span class="step"></span>
+                    </div>
+
+                    <!-- <button type="submit">Оплатить</button> -->
                 </form>
             </div>
         </section>
@@ -118,7 +226,11 @@
         <p class="footer_rights-mobile">©2022 Мир Права<br>
             Все права защищены.</p>
     </footer>
-    <script src="./script/menu.js"></script>
+    <script type="module" src="../script/auth.js"></script>
+    <script type="module" src="../script/servicePageSignUp.js"></script>
+    <script src="../script/menu.js"></script>
+    <script src="../script/servicePageSubmit.js"></script>
+    <script src="../script/multipleStepForm.js"></script>
 </body>
 <svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 60" id="logo">

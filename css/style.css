@@ -438,7 +438,9 @@ body {
   color: #343434;
 }
 
-.price, .who-we-are, .speciality {
+.price,
+.who-we-are,
+.speciality {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -452,17 +454,23 @@ body {
   background: #f4f7ff;
 }
 
-.price__description, .who-we-are__description, .speciality__description {
+.price__description,
+.who-we-are__description,
+.speciality__description {
   width: 50%;
   padding: 0 10% 0 5%;
   margin: 50px 0;
 }
 
-.price__description p:last-of-type, .who-we-are__description p:last-of-type, .speciality__description p:last-of-type {
+.price__description p:last-of-type,
+.who-we-are__description p:last-of-type,
+.speciality__description p:last-of-type {
   margin: 30px 0 50px;
 }
 
-.price__img, .who-we-are__img, .speciality__img {
+.price__img,
+.who-we-are__img,
+.speciality__img {
   width: 50%;
   height: 28em;
   background: url(../img/price-block.png) no-repeat;
@@ -470,15 +478,21 @@ body {
   margin: 3em 0;
 }
 
-.price__list, .who-we-are__list, .speciality__list {
+.price__list,
+.who-we-are__list,
+.speciality__list {
   margin-left: 20px;
 }
 
-.price__list li:not(:last-child), .who-we-are__list li:not(:last-child), .speciality__list li:not(:last-child) {
+.price__list li:not(:last-child),
+.who-we-are__list li:not(:last-child),
+.speciality__list li:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.price__list span, .who-we-are__list span, .speciality__list span {
+.price__list span,
+.who-we-are__list span,
+.speciality__list span {
   color: #c5232d;
   font-weight: 700;
 }
@@ -739,11 +753,14 @@ body {
 }
 
 .faq__photo {
+  position: relative;
   width: 50%;
 }
 
 .faq__photo img {
   width: 100%;
+  position: relative;
+  bottom: -6px;
 }
 
 .faq__question {
@@ -806,7 +823,8 @@ body {
   color: white;
 }
 
-.consultation, .contacts {
+.consultation,
+.contacts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -820,16 +838,19 @@ body {
   background: #f4f7ff;
 }
 
-.consultation__info, .contacts__info {
+.consultation__info,
+.contacts__info {
   width: 50%;
   margin-bottom: 5em;
 }
 
-.consultation__form, .contacts__form {
+.consultation__form,
+.contacts__form {
   width: 50%;
 }
 
-.consultation__form form, .contacts__form form {
+.consultation__form form,
+.contacts__form form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -839,15 +860,24 @@ body {
           flex-direction: column;
 }
 
-.consultation__form form input, .consultation__form form label, .consultation__form form textarea, .contacts__form form input, .contacts__form form label, .contacts__form form textarea {
+.consultation__form form input,
+.consultation__form form label,
+.consultation__form form textarea,
+.contacts__form form input,
+.contacts__form form label,
+.contacts__form form textarea {
   display: block;
 }
 
-.consultation__form form label, .contacts__form form label {
+.consultation__form form label,
+.contacts__form form label {
   margin: 0 18% 15px 18%;
 }
 
-.consultation__form form input, .consultation__form form textarea, .contacts__form form input, .contacts__form form textarea {
+.consultation__form form input,
+.consultation__form form textarea,
+.contacts__form form input,
+.contacts__form form textarea {
   padding: 10px 15px;
   border: 1px solid #131F49;
   border-radius: 20px;
@@ -855,7 +885,8 @@ body {
   width: 100%;
 }
 
-.consultation__form form #upload-lable, .contacts__form form #upload-lable {
+.consultation__form form #upload-lable,
+.contacts__form form #upload-lable {
   display: inline-block;
   position: relative;
   width: 3em;
@@ -872,7 +903,8 @@ body {
   margin-top: 1rem;
 }
 
-.consultation__form form #upload-lable::after, .contacts__form form #upload-lable::after {
+.consultation__form form #upload-lable::after,
+.contacts__form form #upload-lable::after {
   position: absolute;
   width: 10em;
   content: "Прикрепить файл";
@@ -886,7 +918,8 @@ body {
   left: 3.5em;
 }
 
-.consultation__form input::-webkit-input-placeholder, .contacts__form input::-webkit-input-placeholder {
+.consultation__form input::-webkit-input-placeholder,
+.contacts__form input::-webkit-input-placeholder {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -896,7 +929,8 @@ body {
   color: #b7b8c4;
 }
 
-.consultation__form input:-ms-input-placeholder, .contacts__form input:-ms-input-placeholder {
+.consultation__form input:-ms-input-placeholder,
+.contacts__form input:-ms-input-placeholder {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -906,7 +940,8 @@ body {
   color: #b7b8c4;
 }
 
-.consultation__form input::-ms-input-placeholder, .contacts__form input::-ms-input-placeholder {
+.consultation__form input::-ms-input-placeholder,
+.contacts__form input::-ms-input-placeholder {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -916,7 +951,8 @@ body {
   color: #b7b8c4;
 }
 
-.consultation__form input::placeholder, .contacts__form input::placeholder {
+.consultation__form input::placeholder,
+.contacts__form input::placeholder {
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -926,7 +962,8 @@ body {
   color: #b7b8c4;
 }
 
-.consultation__form button, .contacts__form button {
+.consultation__form button,
+.contacts__form button {
   margin: 2em 0 0 18%;
   width: 9em;
   height: 3.5em;
@@ -952,17 +989,31 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /* стили при наведении курсора на checkbox */
+  /* стили для активного состояния чекбокса (при нажатии на него) */
+  /* стили для чекбокса, находящегося в фокусе */
+  /* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+  /* стили для чекбокса, находящегося в состоянии disabled */
 }
 
-.form input, .form label, .form textarea {
+.form input,
+.form label,
+.form textarea {
   display: block;
 }
 
-.form input label, .form label label, .form textarea label {
+.form input label,
+.form label label,
+.form textarea label {
   margin: 0 18% 15px 18%;
 }
 
-.form input input, .form input textarea, .form label input, .form label textarea, .form textarea input, .form textarea textarea {
+.form input input,
+.form input textarea,
+.form label input,
+.form label textarea,
+.form textarea input,
+.form textarea textarea {
   padding: 10px 15px;
   border: 1px solid #131F49;
   border-radius: 20px;
@@ -970,7 +1021,9 @@ body {
   width: 100%;
 }
 
-.form input #upload-lable, .form label #upload-lable, .form textarea #upload-lable {
+.form input #upload-lable,
+.form label #upload-lable,
+.form textarea #upload-lable {
   display: inline-block;
   position: relative;
   width: 3em;
@@ -987,7 +1040,9 @@ body {
   margin-top: 1rem;
 }
 
-.form input #upload-lable::after, .form label #upload-lable::after, .form textarea #upload-lable::after {
+.form input #upload-lable::after,
+.form label #upload-lable::after,
+.form textarea #upload-lable::after {
   position: absolute;
   width: 10em;
   content: "Прикрепить файл";
@@ -1065,6 +1120,110 @@ body {
   display: block;
   color: #c5232d;
   padding-top: 10px;
+}
+
+.form .radio-btn .radio-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.form .radio-btn input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  -webkit-transition: 0.2s all linear;
+  transition: 0.2s all linear;
+  outline: none;
+  margin-right: 5px;
+  position: relative;
+  top: 4px;
+}
+
+.form .radio-btn input:checked {
+  border: 6px solid black;
+  background-color: white;
+}
+
+.form .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form .custom-checkbox {
+  margin-bottom: 0;
+  margin-left: 1em;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.form .custom-checkbox + label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.form .custom-checkbox + label::before {
+  content: '';
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 1px solid #adb5bd;
+  border-radius: 0.25em;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.form .custom-checkbox:checked + label::before {
+  border-color: black;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='black' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.form .custom-checkbox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: #000000;
+}
+
+.form .custom-checkbox:not(:disabled):active + label::before {
+  background-color: rgba(5, 28, 54, 0.2);
+  border-color: #091f38;
+}
+
+.form .custom-checkbox:focus + label::before {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+
+.form .custom-checkbox:focus:not(:checked) + label::before {
+  border-color: black;
+}
+
+.form .custom-checkbox:disabled + label::before {
+  background-color: #e9ecef;
 }
 
 .footer {
@@ -1451,18 +1610,21 @@ body {
   color: white;
 }
 
-.payment, .not-found {
+.payment,
+.not-found {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 5em calc(50vw - 585px);
 }
 
-.payment__text, .not-found__text {
+.payment__text,
+.not-found__text {
   margin: 2em 0;
 }
 
-.payment img, .not-found img {
+.payment img,
+.not-found img {
   width: auto;
   height: 100%;
 }
@@ -1549,6 +1711,7 @@ body {
   font-size: 28px;
   line-height: 36px;
   color: #343434;
+  margin-bottom: 30px;
 }
 
 .service-page__form .form {
@@ -1573,9 +1736,8 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 0 calc(50vw - 585px);
+  padding: 3em calc(50vw - 585px) 1em;
   background: #f4f7ff;
-  padding-top: 3em;
 }
 
 .personal__info {
@@ -1662,6 +1824,49 @@ body {
   margin-bottom: 0.6em;
 }
 
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #79ccae;
+}
+
+.btn-group {
+  float: left;
+}
+
+#prevBtn {
+  color: #c5232d;
+  background: white;
+  border: 2px solid #c5232d;
+  margin-right: 1.5em;
+}
+
 @media (max-width: 1170px) {
   .button {
     padding: 1em 1em;
@@ -1669,7 +1874,7 @@ body {
   .header, .about-us, .our-services, .price, .pros, .stats, .reviews, .faq {
     padding: 0 10px;
   }
-  .consultation {
+  .consultation, .service-page {
     padding: 3em 10px 6em;
   }
   .footer {
@@ -1686,12 +1891,15 @@ body {
   .payment, .not-found {
     padding: 5em 10px;
   }
+  .personal {
+    padding: 3em 10px 1em;
+  }
 }
 
 @media (max-width: 992px) {
   .header h1 {
     font-size: 34px;
-    width: 90%;
+    width: 70%;
     margin-top: 70px;
   }
   .header .logo-icon {
@@ -2072,6 +2280,45 @@ body {
   .payment img, .not-found img {
     width: 75%;
   }
+  .service-page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .service-page__text {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .service-page__form {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .service-page__form p {
+    text-align: center;
+    margin-top: 1em;
+  }
+  .personal {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .personal__info {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .personal__docs {
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+  .personal form {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 576px) {
@@ -2106,9 +2353,25 @@ body {
   .modal-body .form {
     width: 80%;
   }
+  .service-page__text {
+    width: 100%;
+  }
+  .service-page__form {
+    width: 100%;
+  }
+  .service-page__form p {
+    text-align: center;
+    margin-top: 1em;
+  }
+  .personal__info {
+    width: 100%;
+  }
+  .personal__docs {
+    width: 100%;
+  }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 380px) {
   .header h1 {
     margin-top: 0px;
     font-size: 28px;
@@ -2124,6 +2387,12 @@ body {
     font-size: 12px;
     padding: 1em 0.5em;
     width: 100%;
+  }
+  #prevBtn {
+    margin-right: 0.5em;
+  }
+  .form button {
+    width: 8em;
   }
 }
 /*# sourceMappingURL=style.css.map */

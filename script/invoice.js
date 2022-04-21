@@ -1,23 +1,22 @@
 const button = document.querySelector("#invoice");
 
 const reqBody = {
-    amount: 4200,
+    amount: 3000,
     ccy: 980,
     merchantPaymInfo: {
       reference: "84d0070ee4e44667b31371d8f8813947",
-      destination: "Покупка щастя",
+      destination: "Оплата юридичних послуг ProshuSud",
       basketOrder: [
         {
           name: "Табуретка",
           qty: 2,
-          sum: 1700,
+          sum: 1500,
           icon: "string",
           unit: "шт.",
         },
       ],
     },
-    redirectUrl: "string",
-    webHookUrl: "string",
+    redirectUrl: "https://www.google.com/",
     validity: 3600,
     paymentType: "debit",
   }
@@ -30,17 +29,16 @@ const call = async (e) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-Token": "uN3ugCfes6OMV_LaY2Wu9WpbMEY1T4xTjNCClxf6wKO4",
+        "X-Token": "mywjyF3uLxweaEdGkdXL2Ww",
       },
       body: JSON.stringify(reqBody)
     });
   } catch (e) {
     console.log(e);
   }
-  const data = await response.json();
-//   window.location.href = data.pageUrl;
-window.open(data.pageUrl, '_blank').focus();
-  console.log(data.pageUrl);
+  
+  const { pageUrl } = await response.json();
+  window.open(pageUrl, '_blank').focus();
 };
 
 button.addEventListener('click', call)

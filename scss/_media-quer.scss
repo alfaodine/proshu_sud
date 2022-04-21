@@ -6,7 +6,7 @@
     .header, .about-us, .our-services, .price, .pros, .stats, .reviews, .faq{
         padding: 0 10px;
     }
-    .consultation{
+    .consultation, .service-page{
         padding: 3em 10px 6em;
     }
     .footer{
@@ -23,13 +23,16 @@
     .payment, .not-found{
         padding: 5em 10px;
     }
+    .personal{
+        padding: 3em 10px 1em;
+    }
 
 }
 @media (max-width: 992px){
     .header{
         & h1{
             font-size: 34px;
-            width: 90%;
+            width: 70%;
             margin-top: 70px;
         }
         & .logo-icon {
@@ -391,7 +394,40 @@
             width: 75%;
         }
     }
+    .service-page{
+    flex-direction: column;
+    justify-content: center;
+    &__text{
+        width: 80%;
+        margin: 0 auto;
+    }
+    &__form{
+        width: 80%;
+        margin: 0 auto;
+        & p{
+            text-align: center;
+            margin-top: 1em;
+        }
+    }
 }
+.personal{
+    flex-direction: column;
+    &__info{
+        width: 80%;
+        margin: 0 auto;
+    }
+    &__docs{
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 0;
+    }
+    & form{
+        padding-right: 0;
+    }
+}
+}
+
+
 @media (max-width: 576px){
 
 
@@ -436,9 +472,32 @@
             width: 80%;
         }
     }
+    .service-page{
+        &__text{
+            width: 100%;
+        }
+        &__form{
+            width: 100%;
+            // & .form{
+            //     width: 80%;
+            // }
+            & p{
+                text-align: center;
+                margin-top: 1em;
+            }
+        }
+    }
+    .personal{
+        &__info{
+            width: 100%;
+        }
+        &__docs{
+            width: 100%;
+        }
+    }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 380px) {
     .header{
         & h1{
             margin-top: 0px;
@@ -459,5 +518,11 @@
         font-size: 12px;
         padding: 1em 0.5em;
         width: 100%;
+    }
+    #prevBtn{
+        margin-right: 0.5em;
+    }
+    .form button{
+        width: 8em;
     }
 }

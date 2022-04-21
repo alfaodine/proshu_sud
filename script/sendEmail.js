@@ -1,4 +1,4 @@
-const button = document.querySelector("#invoice"),
+const buttonEmail = document.querySelector("#invoice"),
       userName = document.querySelector('#your_name'),
       userEmail = document.querySelector('#your_email'),
       userText = document.querySelector('#your_text');
@@ -30,4 +30,4 @@ function getFieldsValue (e){
 userName.value, userEmail.value, userText.value
 }
 
-button.addEventListener('click', sendEmail)
+buttonEmail.addEventListener('click', sendEmail);
