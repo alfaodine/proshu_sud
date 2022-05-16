@@ -63,6 +63,21 @@ body {
           transform-origin: 10% 80%;
 }
 
+::-webkit-scrollbar-track {
+  border-radius: 20px;
+  background-color: rgba(245, 245, 245, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
 .header {
   position: relative;
   height: 100vh;
@@ -885,8 +900,9 @@ body {
   width: 100%;
 }
 
-.consultation__form form #upload-lable,
-.contacts__form form #upload-lable {
+.consultation__form form #upload-lable, .consultation__form form #upload-lable_modal,
+.contacts__form form #upload-lable,
+.contacts__form form #upload-lable_modal {
   display: inline-block;
   position: relative;
   width: 3em;
@@ -903,11 +919,12 @@ body {
   margin-top: 1rem;
 }
 
-.consultation__form form #upload-lable::after,
-.contacts__form form #upload-lable::after {
+.consultation__form form #upload-lable::after, .consultation__form form #upload-lable_modal::after,
+.contacts__form form #upload-lable::after,
+.contacts__form form #upload-lable_modal::after {
   position: absolute;
   width: 10em;
-  content: "Прикрепить файл";
+  content: attr(data-after);
   font-family: Open Sans;
   font-style: normal;
   font-weight: 400;
@@ -1021,9 +1038,11 @@ body {
   width: 100%;
 }
 
-.form input #upload-lable,
+.form input #upload-lable, .form input #upload-lable_modal,
 .form label #upload-lable,
-.form textarea #upload-lable {
+.form label #upload-lable_modal,
+.form textarea #upload-lable,
+.form textarea #upload-lable_modal {
   display: inline-block;
   position: relative;
   width: 3em;
@@ -1040,9 +1059,11 @@ body {
   margin-top: 1rem;
 }
 
-.form input #upload-lable::after,
+.form input #upload-lable::after, .form input #upload-lable_modal::after,
 .form label #upload-lable::after,
-.form textarea #upload-lable::after {
+.form label #upload-lable_modal::after,
+.form textarea #upload-lable::after,
+.form textarea #upload-lable_modal::after {
   position: absolute;
   width: 10em;
   content: "Прикрепить файл";
@@ -2371,14 +2392,12 @@ input.invalid {
   }
 }
 
-@media (max-width: 380px) {
-  .header h1 {
-    margin-top: 0px;
-    font-size: 28px;
-  }
+@media (max-width: 415px) {
   .header__ceo-info {
-    left: 20px;
-    bottom: 20px;
+    bottom: 70px;
+  }
+  .header__text {
+    display: none;
   }
   .stats__text {
     font-size: 12px;

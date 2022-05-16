@@ -46,7 +46,7 @@
     }
 
     signInForm.addEventListener('submit', signIn);
-    signInForm.addEventListener('submit', addUserToDB);
+    // signInForm.addEventListener('submit', addUserToDB);
 
     function showLoginError(error) {
         console.log(error);

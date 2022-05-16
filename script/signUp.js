@@ -13,6 +13,7 @@ import {
 } from './auth.js';
 
 const signUpForm = document.querySelector('.form');
+const errorLog = document.querySelector('.error-log');
 
 
 const signUp = async (e) => {
@@ -23,7 +24,8 @@ const signUp = async (e) => {
 const email = signUpForm['register_email'].value;
 const password = signUpForm['register_password'].value;
 const password2 = signUpForm['register_password2'].value;
-
+ 
+if (password === password2) {
     try {
         const userCreated = await createUserWithEmailAndPassword(auth, email, password);
         if (userCreated.operationType === "signIn"){
@@ -33,6 +35,15 @@ const password2 = signUpForm['register_password2'].value;
     } catch (error) {
         console.log(error);
     }
+} else {
+    errorLog.innerText = 'Пароли не совпадают. Попробуйте еще раз.';
+    errorLog.classList.add('error-log-show');
+    setTimeout(() => {
+        errorLog.classList.remove('error-log-show')
+    }, 3000)
+}
+
+
 
 }
 
@@ -49,6 +60,7 @@ async function addUserToDB() {
 
    const documentEmail = doc(db, `Users/${email}`);
    const docData = {
+       id: Date.now(),
        name: name,
        middleName: midName,
        lastName: lastName,

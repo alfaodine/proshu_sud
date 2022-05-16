@@ -55,6 +55,27 @@ body {
     transform-origin: 10% 80%;
 }
 
+//--------------
+//----Scroll bar----------------
+::-webkit-scrollbar-track
+{
+	// box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+    border-radius: 20px;
+	background-color: rgba(245, 245, 245, 0.1);
+}
+::-webkit-scrollbar
+{
+	width: 8px; 
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: rgba(0, 0, 0, .3);
+    border-radius: 20px;
+}
+//-----------------------------
+
 .header {
     position: relative;
     height: 100vh;
@@ -745,7 +766,7 @@ body {
                 width: 100%;
             }
 
-            & #upload-lable {
+            & #upload-lable, #upload-lable_modal {
                 display: inline-block;
                 position: relative;
                 width: 3em;
@@ -762,10 +783,10 @@ body {
                 margin-top: 1rem;
             }
 
-            & #upload-lable::after {
+            & #upload-lable::after, #upload-lable_modal::after {
                 position: absolute;
                 width: 10em;
-                content: "Прикрепить файл";
+                content: attr(data-after);
                 @include font_style (Open Sans, 16px, 400, 24px);
                 top: 0.8em;
                 left: 3.5em;
@@ -818,7 +839,7 @@ body {
             width: 100%;
         }
 
-        & #upload-lable {
+        & #upload-lable, #upload-lable_modal {
             display: inline-block;
             position: relative;
             width: 3em;
@@ -835,7 +856,7 @@ body {
             margin-top: 1rem;
         }
 
-        & #upload-lable::after {
+        & #upload-lable::after, #upload-lable_modal::after {
             position: absolute;
             width: 10em;
             content: "Прикрепить файл";

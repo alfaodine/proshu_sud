@@ -21,6 +21,7 @@ const nextBtn = document.querySelector('#nextBtn');
 
 const regBlock = document.querySelector('.register-form');
 const PersonalInfoBlock = document.querySelector('.personal-info-form');
+const errorLog = document.querySelector('.error-log');
 let user = {};
 
 
@@ -34,7 +35,7 @@ user.name = signUpForm['register_name'].value;
 user.midName = signUpForm['register_midname'].value;
 user.email = signUpForm['register_email'].value;
 user.password = signUpForm['register_password'].value;
-
+if (user.password === user.password2) {
     try {
         const userCreated = await createUserWithEmailAndPassword(auth, user.email, user.password);
         if (userCreated.operationType === "signIn"){
@@ -44,6 +45,13 @@ user.password = signUpForm['register_password'].value;
     } catch (error) {
         console.log(error);
     }
+} else {
+    errorLog.innerText = 'Пароли не совпадают. Попробуйте еще раз.';
+    errorLog.classList.add('error-log-show');
+    setTimeout(() => {
+        errorLog.classList.remove('error-log-show')
+    }, 3000)
+}
 
 }
 

@@ -497,15 +497,19 @@
     }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 415px) {
     .header{
-        & h1{
-            margin-top: 0px;
-            font-size: 28px;
-        }
+        // & h1{
+        //     margin-top: 0px;
+        //     font-size: 28px;
+        // }
         &__ceo-info{
-            left: 20px;
-            bottom: 20px;
+            // left: 20px;
+            // bottom: 20px;
+            bottom: 70px;
+        }
+        &__text{
+            display: none;
         }
     }
 

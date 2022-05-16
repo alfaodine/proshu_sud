@@ -32,7 +32,7 @@
             </button>
             <div class="header__menu-bg">
                 <ul class="header__menu">
-                    <li class="menu__item"><a class="underline" href="./about-us.html">Кто мы</a></li>
+                    <li class="menu__item"><a class="underline" href="../React/react_feedback_app/public/index.html">Кто мы</a></li>
                     <li class="menu__item"><a class="underline" href="./how-to.html">Как это работает</a></li>
                     <li class="menu__item"><a class="underline" href="./contacts.html">Контакты</a></li>
                     <li class="menu__item" id="personal-area_mobile"><svg class="icon">
@@ -72,12 +72,13 @@
                             <p>Some other text...</p> -->
                             <form class="form">
                                 <p>Стоимость консультации <span> 500 грн.</span> Если после консультации понадобятся дополнительные услуги, то эта сумма будет включена в стоимость услуги.</p>
-                                <label>Ваше имя<input type="text" placeholder="Иван" ></label>
-                                <label>Ваша номер телефона<input type="text" placeholder="0508855888"></label>
-                                <label>Опишите суть проблемы<textarea name="comment" cols="40" rows="5"></textarea></label>
-                                <input type="file" id="upload" style="display:none"/>
-                                <label id="upload-lable" for="upload"></label>
-                                <button type="submit">Оплатить</button>
+                                <label>Ваше имя<input type="text" id="your_name_modal" placeholder="Иван" ></label>
+                                <label>Ваша номер телефона<input type="text"  id="your_number_modal" placeholder="0508855888"></label>
+                                <label>Ваш email<input type="text"  id="your_email_modal" placeholder="mail@mail.com"></label>
+                                <label>Опишите суть проблемы<textarea name="comment"  id="your_text_modal" cols="40" rows="5"></textarea></label>
+                                <!-- <input type="file" accept="application/pdf" id="upload_modal" style="display:none" />
+                                <label id="upload-lable_modal" for="upload_modal" data-after="Прикрепить файл"></label> -->
+                                <button id="button_modal">Оплатить</button>
                             </form>
                         </div>
                         <!-- <div class="modal-footer">
@@ -113,7 +114,7 @@
             <div class="about-us__description">
                 <button class="button" id="button_mobile">Получить консультацию онлайн</button>
                 <p class="about-us__title title">
-                    Сервис создан для помощи оформления искового заявленияв онлайн режиме.
+                    Сервис создан для помощи оформления искового заявления в онлайн режиме.
                 </p>
                 <p class="about-us__text">
                     В удобное время и в удобном месте, без посещения адвоката, вы сможете получить исковое заявление
@@ -459,11 +460,11 @@
             <div class="consultation__form">
                 <form>
                     <label>Ваше имя<input id="your_name" type="text" placeholder="Иван"></label>
-                    <label>Ваша номер телефона<input type="text" placeholder="0508855888"></label>
+                    <label>Ваша номер телефона<input id="your_number" type="text" placeholder="0508855888"></label>
                     <label>Ваше email<input id="your_email" type="text" placeholder="mail@mail.com"></label>
                     <label>Опишите суть проблемы<textarea id="your_text" name="comment" cols="40" rows="5"></textarea></label>
-                    <input type="file" accept="application/pdf" id="upload" style="display:none" />
-                    <label id="upload-lable" for="upload"></label>
+                    <input type="file" accept="application/pdf,.doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document, image/*" id="upload" style="display:none" />
+                    <label id="upload-lable" for="upload" data-after="Прикрепить файл"></label>
                     <button id="invoice" type="submit">Оплатить</button>
                 </form>
             </div>
@@ -506,8 +507,10 @@
     </footer>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="./script/invoice.js"></script>
-    <!-- <script src="./script/sendEmail.js"></script> -->
+    <script type="module" src="./script/auth.js"></script>
+    <script type="module" src="./script/invoice.js"></script>
+    <script src="./script/changeLabel.js"></script>
+    <script type="module" src="./script/sendEmail.js"></script>
     <script src="./script/menu.js"></script>
     <script src="./script/accordion.js"></script>
     <script src="./script/modal.js"></script>

@@ -15,6 +15,11 @@
 </head>
 
 <body id="pages_style">
+    <!-- check if user is logged in -->
+    <script async type="module" src="./script/auth.js"></script>
+    <script async type="module" src="./script/monitorUserState.js"></script>
+
+
     <header class="header header_page">
         <div class="header__top">
             <a href="./index.html">
@@ -67,7 +72,7 @@
             <h1>Вход в личный кабинет</h1>
             <form class="form" action="">
                 <label>Email<input type="text" id="signUpEmail" placeholder="mail@gmail.com" required></label>
-                <label>Пароль<input type="text" id="signUpPassword" placeholder="********" required></label>
+                <label>Пароль<input type="password" id="signUpPassword" placeholder="********" required></label>
                 <p class="error-log"></p>
                 <button type="submit">Войти</button>
                 <a href="./index.html">Вернуться на главную</a>
@@ -110,7 +115,6 @@
         <p class="footer_rights-mobile">©2022 Мир Права<br>
             Все права защищены.</p>
     </footer>
-    <script type="module" src="./script/auth.js"></script>
     <script src="./script/menu.js"></script>
     <script type="module" src="./script/login.js"></script>
 </body>
