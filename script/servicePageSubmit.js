@@ -66,9 +66,14 @@ function getFormData() {
   if (currentTab >= x.length) {
     let allFields = document.querySelectorAll('input[type="text"], input[type="date"], input[type="radio"]:checked, input[type="checkbox"]:checked, textarea');
     let allLabels = document.querySelectorAll('.tab > label, .register-form > label, .personal-info-form > label, .radio-btn > label, .checkbox > label');
-    for (let i = 0; i < allFields.length; i++) {
-      textFromForm += `${allLabels[i].innerText}: ${allFields[i].value} \n`;
-    }
+    allLabels.forEach((el, index) => {
+      textFromForm += `${el.innerText}: ${allFields[index+1].value} \n`;
+    });
+    // for (let i = 2; i < allFields.length; i++) {
+    //   console.log('text:' ,allFields[i].innerText);
+
+      
+    // }
 
     //-------------------set order in db
     const date = new Date;
@@ -80,6 +85,7 @@ function getFormData() {
     let phoneField = document.querySelector('#personal_phone');
     const formData = {
       email: emailField.value,
+      id: Date.now(),
       name: `${lastNameField.value} ${nameField.value} ${midField.value}`,
       phone: phoneField.value,
       text: textFromForm,
@@ -91,7 +97,6 @@ function getFormData() {
   
     //--------------------------------------
     setOrderData(formData);
-
     sendEmail(textFromForm);
     getInvoice(prices[pageName], emailField.value);
   }
@@ -138,7 +143,7 @@ const getInvoice = async (service, email) => {
         unit: "шт.",
       }, ],
     },
-    redirectUrl: "https://proshusud.com.ua/payment.html/",
+    redirectUrl: "https://proshusud.com.ua/payment.html",
     validity: 3600,
     webHookUrl: "https://xu5va381hj.execute-api.us-east-1.amazonaws.com/updatePaymentStatus",
     paymentType: "debit",
@@ -183,7 +188,7 @@ async function setOrderData(formData) {
 async function setPaymentData(invoiceId, email) {
   const documentOrders = doc(db, `orders/${email}`);
   try{
-    let resp = await setDoc(documentOrders, {id: invoiceId}, { merge: true });
+    let resp = await setDoc(documentOrders, {invoiceId: invoiceId}, { merge: true });
     console.log(resp)
    } catch(error) {
     console.log(error)

@@ -271,6 +271,15 @@ body {
   }
 }
 
+button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-box-shadow: 3px 2px 25px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 3px 2px 25px 1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
 .button {
   padding: 1em 2em;
   background: #c5232d;
@@ -996,6 +1005,37 @@ body {
   color: white;
 }
 
+#upload-lable_modal {
+  display: inline-block;
+  position: relative;
+  width: 3em;
+  height: 3em;
+  background: #C5232D;
+  background-image: url(../img/svg/pin-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+  color: white;
+  padding: 0.5rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+#upload-lable_modal::after {
+  position: absolute;
+  width: 10em;
+  content: attr(data-after);
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
+  top: 0.8em;
+  left: 3.5em;
+}
+
 .form {
   width: 50%;
   margin: 10% auto;
@@ -1139,6 +1179,12 @@ body {
 
 .form .error-log-show {
   display: block;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #343434;
   color: #c5232d;
   padding-top: 10px;
 }
@@ -1733,6 +1779,16 @@ body {
   line-height: 36px;
   color: #343434;
   margin-bottom: 30px;
+}
+
+.service-page__form .register_login {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: #343434;
+  margin-bottom: 20px;
 }
 
 .service-page__form .form {

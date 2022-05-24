@@ -33,22 +33,27 @@ if (password === password2) {
             monitorAuthState();
         }
     } catch (error) {
+        if (String(error).includes('auth/email-already-in-use')) showError('Этот email уже зарегистрирован. Попробуйте войти в аккаунт');
+        if (String(error).includes('auth/internal-error')) showError('Проверьте правильность написания пароль или email адреса');
+        if (String(error).includes('auth/invalid-email')) showError('Проверьте правильность написания email адреса');
         console.log(error);
     }
 } else {
-    errorLog.innerText = 'Пароли не совпадают. Попробуйте еще раз.';
+    showError('Пароли не совпадают. Попробуйте еще раз.')
+}
+
+
+
+}
+
+
+function showError (err) {
+    errorLog.innerText = err;
     errorLog.classList.add('error-log-show');
     setTimeout(() => {
         errorLog.classList.remove('error-log-show')
-    }, 3000)
+    }, 5000)
 }
-
-
-
-}
-
-
-
 
 async function addUserToDB() {
 

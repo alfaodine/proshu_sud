@@ -350,7 +350,13 @@ body {
     }
 
 }
-
+button{
+    &:active {
+        transform: scale(0.98);
+        box-shadow: 3px 2px 25px 1px rgba(0,0,0,0.25);
+        transition: all .1s;
+    }
+}
 .button {
     padding: 1em 2em;
     background: $color_red;
@@ -812,6 +818,31 @@ body {
 }
 
 // ----------------form-styles----------------
+#upload-lable_modal {
+    display: inline-block;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    background: #C5232D;
+    background-image: url(../img/svg/pin-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50px;
+    color: white;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    cursor: pointer;
+    margin-top: 1rem;
+    &::after{
+        position: absolute;
+        width: 10em;
+        content: attr(data-after);
+        @include font_style (Open Sans, 16px, 400, 24px);
+        top: 0.8em;
+        left: 3.5em;
+    }
+}
+
 
 .form {
     width: 50%;
@@ -888,6 +919,7 @@ body {
 
     & .error-log-show {
         display: block;
+        @include font_style (Open Sans, 16px, 700, 24px);
         color: $color_red;
         padding-top: 10px;
     }
@@ -1414,6 +1446,10 @@ body {
         & p {
             @include font_style (Prata, 28px, 400, 36px);
             margin-bottom: 30px;
+        }
+        & .register_login{
+            @include font_style (Open Sans, 14px, 400, 28px);
+            margin-bottom: 20px;
         }
 
         width: 50%;

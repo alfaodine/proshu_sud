@@ -15,6 +15,7 @@ let buttonEmail = document.querySelector("#invoice"),
 
 //--------------File field
       let fileField = document.querySelector('#upload'),
+          fileFieldModal = document.querySelector('#upload_modal'),
           bs64 = '';
 
 
@@ -33,9 +34,8 @@ function getModalFields(e) {
 
 function sendEmail (e) {
     e.preventDefault();
-    console.log('email');
     const date = new Date;
-    const dateStr = `${date.getDate()}.${(date.getMonth() > 10) ? date.getMonth() : '0'+date.getMonth()}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}`;
+    const dateStr = `${date.getDate()}.${(date.getMonth() > 10) ? date.getMonth() : '0'+date.getMonth()}.${date.getFullYear()} ${(date.getHours() > 10) ? date.getHours() : '0'+date.getHours()}:${(date.getMinutes() > 10) ? date.getMinutes() : '0'+date.getMinutes()}`;
     const formData = {
       email: userEmail.value,
       name: userName.value,
@@ -46,6 +46,7 @@ function sendEmail (e) {
       date: dateStr,
       amount: '300',
     }
+    console.log('email', formData);
 
     setOrderData(formData);
 
@@ -89,6 +90,10 @@ async function getBase64() {
   let file = fileField.files[0];
   bs64 = await toBase64(file);
 }
+async function getBase64Modal() {
+  let file = fileFieldModal.files[0];
+  bs64 = await toBase64(file);
+}
 //-------------------------------------------------------------
 
 //--------------------Set New order in DB----------------------
@@ -112,3 +117,4 @@ buttonModal.addEventListener('click', sendEmail);
 
 //-----------Listener on file loading
 fileField.addEventListener('change', getBase64, false );
+fileFieldModal.addEventListener('change', getBase64Modal, false );

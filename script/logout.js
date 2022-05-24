@@ -7,8 +7,10 @@ import {
 
 const logOutBtn = document.querySelector('.log_out');
 const logOutBtn2 = document.querySelector('.log_out2');
+const logOutBtnMobile = document.querySelector('.log_out_mobile');
 logOutBtn.addEventListener('click', userLogOut);
-logOutBtn2.addEventListener('click', userLogOut);
+logOutBtn2.addEventListener('click', userLogOut); 
+logOutBtnMobile.addEventListener('click', userLogOut); 
 
 
 async function userLogOut() {

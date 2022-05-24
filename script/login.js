@@ -51,13 +51,20 @@
     function showLoginError(error) {
         console.log(error);
         if (error.code == 'auth/wrong-password') {
-            console.log('password is wrong');
             errorLog.innerText = 'Неправильный пароль. Попробуйте еще раз.';
             errorLog.classList.add('error-log-show');
             setTimeout(() => {
                 errorLog.classList.remove('error-log-show')
             }, 3000)
 
+        }
+        if (error.code == 'auth/user-not-found') {
+            errorLog.innerText = 'Неправильный email. Попробуйте еще раз.';
+            errorLog.classList.add('error-log-show');
+            setTimeout(() => {
+                errorLog.classList.remove('error-log-show')
+            }, 5000)
+    
         }
     }
 

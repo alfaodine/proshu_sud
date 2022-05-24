@@ -6,18 +6,32 @@ let btn = document.querySelector('.modalBtn');
 
 let btnMobile = document.querySelector('#button_mobile')
 
+let loginLink = document.querySelector('.login_link')
+
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
 
 // When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
+if (loginLink == null){
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  btnMobile.onclick = function() {
+    modal.style.display = "block";
+  }
+} else {
+  loginLink.onclick = function(e) {
+    e.preventDefault();
+    modal.style.display = "block";
+  }
 }
 
-btnMobile.onclick = function() {
-  modal.style.display = "block";
-}
+
+
+
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {

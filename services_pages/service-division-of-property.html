@@ -75,12 +75,41 @@
                     Для заказа искового заявления необходимо пройти регистрацию.
                 </p>
             </div>
+
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                        <span class="close">&times;</span>
+                        <h2>Modal Header</h2>
+                    </div> -->
+                    <div class="modal-body">
+                        <span class="close">&times;</span>
+                        <!-- <p>Some text in the Modal Body</p>
+                        <p>Some other text...</p> -->
+                        <h1 style = "padding-top: 20px; text-align: center;">Вход в личный кабинет</h1>
+                        <form class="form" action="">
+                            <label>Email<input type="text" id="signUpEmail" placeholder="mail@gmail.com" required></label>
+                            <label>Пароль<input type="password" id="signUpPassword" placeholder="********" required></label>
+                            <p class="error-log"></p>
+                            <button type="submit">Войти</button>
+                        </form>
+                    </div>
+                    <!-- <div class="modal-footer">
+                        <h3>Modal Footer</h3>
+                    </div> -->
+                </div>
+
+            </div>
+
             <div class="service-page__form">
                 <form class="form" id="regForm">
 
                     <div class="tab">
                         <div class="register-form">
                             <p>Регистрация</p>
+                            <p class="register_login">Введите ваши данные для регистрации нового аккаунта или <a class="login_link" href="">войдите</a> в уже имеющийся.</p>
                             <label>Фамилия<input type="text" id="register_lastname" placeholder="Иванов"
                                     required></label>
                             <label>Имя<input type="text" id="register_name" placeholder="Иван" required></label>
@@ -88,9 +117,9 @@
                                     required></label>
                             <label>Email<input type="text" id="register_email" placeholder="mail@gmail.com"
                                     required></label>
-                            <label>Пароль<input type="text" id="register_password" placeholder="********"
+                            <label>Пароль<input type="password" id="register_password" placeholder="********"
                                     required></label>
-                            <label>Повторить пароль<input type="text" id="register_password2" placeholder="********"
+                            <label>Повторить пароль<input type="password" id="register_password2" placeholder="********"
                                     required></label>
                             <p class="error-log"></p>
                         </div>
@@ -213,6 +242,8 @@
     <script src="../script/menu.js"></script>
     <script  type="module" src="../script/servicePageSubmit.js"></script>
     <script src="../script/multipleStepForm.js"></script>
+    <script src="../script/modal.js"></script>
+    <script type="module" src="../script/loginModule.js"></script>
 </body>
 <svg width="0" height="0" class="hidden">
     <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 60" id="logo">
