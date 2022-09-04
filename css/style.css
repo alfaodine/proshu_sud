@@ -9,7 +9,7 @@
 body {
   font-family: Open Sans;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 24px;
   font-size: 16px;
   line-height: 24px;
   color: #343434;
@@ -280,6 +280,19 @@ button:active {
   transition: all .1s;
 }
 
+button:disabled {
+  background: #cccccc;
+}
+
+button:disabled:active {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: none;
+  transition: none;
+}
+
 .button {
   padding: 1em 2em;
   background: #c5232d;
@@ -294,6 +307,10 @@ button:active {
   line-height: 22px;
   color: #343434;
   color: white;
+}
+
+.button:disabled {
+  background: #cccccc;
 }
 
 .title {
@@ -1005,6 +1022,11 @@ button:active {
   color: white;
 }
 
+.consultation__form button:disabled,
+.contacts__form button:disabled {
+  background: #cccccc;
+}
+
 #upload-lable_modal {
   display: inline-block;
   position: relative;
@@ -1171,6 +1193,10 @@ button:active {
   line-height: 24px;
   color: #343434;
   color: white;
+}
+
+.form button:disabled {
+  background: #cccccc;
 }
 
 .form .error-log {
@@ -1889,6 +1915,10 @@ button:active {
 
 .sign_up button {
   width: 13em;
+}
+
+.sign_up button:disabled {
+  background: #cccccc;
 }
 
 .sign_up a {

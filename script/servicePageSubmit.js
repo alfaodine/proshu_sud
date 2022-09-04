@@ -17,7 +17,7 @@ pageName = pageName[pageName.length - 1].replace('.html', '')
 let prices = {
   'service-alimony-order': {
     price: 600,
-    name: 'Приказ на взыскание алиментов'
+    name: 'Наказ про стягнення аліментів'
   },
   'communication-with-the-child': {
     price: 2000,
@@ -37,11 +37,11 @@ let prices = {
   },
   'service-child-support-costs':{
     price: 1900,
-    name: 'Дополнительные расходы на содержание ребенка'
+    name: 'Cтягнення додаткових витрат на утримання дитини'
   },
   'service-disputing-paternity':{
     price: 1800,
-    name: 'Исковое заявление об оспаривании отцовства'
+    name: 'Позовна заява про оспорювання батьківства'
   },
   'service-division-of-property':{
     price: 2500,
@@ -49,11 +49,11 @@ let prices = {
   },
   'service-recovery-of-alimony-for-adult-children':{
     price: 1200,
-    name: 'Взыскание алиментов на совершеннолетних детей'
+    name: 'Стягнення аліментів на утримання повнолітніх дітей'
   },
   'service-recovery-of-alimony-for-minor-children':{
     price: 900,
-    name: 'Взыскание алиментов на несовершеннолетних детей'
+    name: 'Стягнення аліментів на утримання неповнолітніх дітей'
   },
 }
 
@@ -67,7 +67,11 @@ function getFormData() {
     let allFields = document.querySelectorAll('input[type="text"], input[type="date"], input[type="radio"]:checked, input[type="checkbox"]:checked, textarea');
     let allLabels = document.querySelectorAll('.tab > label, .register-form > label, .personal-info-form > label, .radio-btn > label, .checkbox > label');
     allLabels.forEach((el, index) => {
-      textFromForm += `${el.innerText}: ${allFields[index+1].value} \n`;
+      let val = '';
+      if (allFields[index+1] !== undefined){
+        val = allFields[index+1].value;
+      }
+      textFromForm += `${el.innerText}: ${val} \n`;
     });
     // for (let i = 2; i < allFields.length; i++) {
     //   console.log('text:' ,allFields[i].innerText);
@@ -115,7 +119,7 @@ function sendEmail(text) {
     },
     body: JSON.stringify({
       senderName: "ustroistva1@gmail.com",
-      senderEmail: `ustroistva@gmail.com`,
+      senderEmail: `pravovodese@gmail.com`,
       message: `${text}`,
       base64Data: '',
       date: new Date(),

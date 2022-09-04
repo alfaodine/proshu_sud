@@ -8,7 +8,7 @@
 }
 
 body {
-    @include font_style (Open Sans, 16px, 400, 24px);
+    @include font_style (Open Sans, 16px, 24px, 24px); 
     overflow-x: hidden;
 }
 
@@ -356,6 +356,14 @@ button{
         box-shadow: 3px 2px 25px 1px rgba(0,0,0,0.25);
         transition: all .1s;
     }
+    &:disabled{
+        background: #cccccc;
+        &:active {
+            transform: none;
+            box-shadow: none;
+            transition: none;
+        }
+    }
 }
 .button {
     padding: 1em 2em;
@@ -365,7 +373,11 @@ button{
     border-radius: 10px;
     @include font_style (Open Sans, 14px, 700, 22px);
     color: rgb(255, 255, 255);
+    &:disabled{
+        background: #cccccc;
+    }
 }
+
 
 .title {
     @include font_style (Prata, 28px, 400, 36px);
@@ -804,7 +816,7 @@ button{
             color: rgba(183, 184, 196, 1);
         }
 
-        & button {
+        & button{
             margin: 2em 0 0 18%;
             width: 9em;
             height: 3.5em;
@@ -813,6 +825,9 @@ button{
             background: $color_red;
             @include font_style (Open Sans, 14px, 700, 24px);
             color: rgb(255, 255, 255);
+            &:disabled{
+                background: #cccccc;
+            }
         }
     }
 }
@@ -911,7 +926,11 @@ button{
         background: $color_red;
         @include font_style (Open Sans, 14px, 700, 24px);
         color: rgb(255, 255, 255);
+        &:disabled{
+            background: #cccccc;
+        }
     }
+
 
     & .error-log {
         display: none;
@@ -1532,6 +1551,9 @@ button{
 .sign_up {
     & button {
         width: 13em;
+        &:disabled{
+            background: #cccccc;
+        }
     }
 
     & a {

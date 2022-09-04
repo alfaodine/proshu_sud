@@ -123,7 +123,7 @@
                             <label>Имя<input type="text" id="register_name" placeholder="Иван" required></label>
                             <label>Отчество<input type="text" id="register_midname" placeholder="Иванович"
                                     required></label>
-                            <label>Email<input type="text" id="register_email" placeholder="mail@gmail.com"
+                            <label>Email<input type="text" data-field="email" id="register_email" placeholder="mail@gmail.com"
                                     required></label>
                             <label>Пароль<input type="password" id="register_password" placeholder="********"
                                     required></label>
@@ -135,10 +135,10 @@
                             <p>Заполните данные истца</p>
                             <label>Фамилия<input type="text" id="personal_lastname" placeholder="Иванов"
                                     required></label>
-                            <label>Имя<input type="text" id="personal_name" placeholder="Иван" required></label>
+                            <label>Имя<input type="text" data-field="name" id="personal_name" placeholder="Иван" required></label>
                             <label>Отчество<input type="text" id="personal_midname" placeholder="Иванович"
                                     required></label>
-                            <label>Email<input type="text" id="personal_email" placeholder="mail@gmail.com"
+                            <label>Email<input type="text" data-field="email" id="personal_email" placeholder="mail@gmail.com"
                                     required></label>
                             <p class="error-log"></p>
                         </div>
@@ -149,7 +149,7 @@
                         <label>Дата рождения<input type="date" placeholder="14.05.1972"></label>
                         <label>Адрес регистрации<input type="text"
                                 placeholder="11002, м. Київ, вул. Мальовнича, 11/25"></label>
-                        <label>Идентификационный код<input type="text" placeholder="12345678"></label>
+                        <label>Идентификационный код<input type="text" data-field="code" placeholder="12345678"></label>
                         <label>Телефон<input type="text" id="personal_phone" placeholder="0505553344"></label>
                     </div>
 
@@ -160,7 +160,7 @@
                         <label>Отчество<input type="text" placeholder="Иванович" required></label>
                         <label>Адрес регистрации<input type="text"
                                 placeholder="11002, м. Київ, вул. Мальовнича, 11/25"></label>
-                        <label>Идентификационный код<input type="text" placeholder="12345678"></label>
+                        <label>Идентификационный код<input type="text" data-field="code" placeholder="12345678"></label>
                         <label>Телефон<input type="text" placeholder="0505553344"></label>
                         <label>Email<input type="text" placeholder="mail@gmail.com" required></label>
                     </div>
@@ -197,6 +197,7 @@
                                     </div>
                                 </div>
                                 <div class="checkbox">
+                                    <input type='hidden'  id="happyHidden" name="happy" value="нет">
                                     <input type="checkbox" class="custom-checkbox" id="happy" name="happy" value="да">
                                     <label for="happy">Взыскать с ответчика судебный сбор</label>
                                 </div>

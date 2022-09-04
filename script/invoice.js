@@ -54,7 +54,7 @@ const call = async (e) => {
   const { pageUrl, invoiceId } = await response.json();
 
   setPaymentData(invoiceId, userEmail.value);
-
+  bookTime();
   window.open(pageUrl, "_self").focus();
 };
 
@@ -73,5 +73,21 @@ async function setPaymentData(invoiceId, email) {
 
 //-------------------------------------------------------------
 
-button.addEventListener('click', call)
-buttonModalInvoice.addEventListener('click', call)
+//--------------Book time for consultation--------------
+async function bookTime() {
+  let timeForm = document.querySelector("#time-form");
+  let day = timeForm.getAttribute('data-day');
+  let arr = ['10:30', '11:00', '11:30', '12:00'];
+  const documentOrders = doc(db, `tTEKXzSsYSIp3NMUP1v6/${day}`);
+  try{
+    let resp = await setDoc(documentOrders, {Friday: arr}, { merge: true });
+    console.log(resp)
+   } catch(error) {
+    console.log(error)
+   }
+}
+
+//------------------------------------------------------
+
+button.addEventListener('click', call);
+buttonModalInvoice.addEventListener('click', call);

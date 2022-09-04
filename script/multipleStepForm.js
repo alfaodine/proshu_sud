@@ -49,12 +49,30 @@ function validateForm() {
   // A loop that checks every input field in the current tab:
   for (i = 0; i < y.length; i++) {
     // If a field is empty...
-    if (y[i].value == "") {
-      // add an "invalid" class to the field:
-      y[i].className += " invalid";
-      // and set the current valid status to false:
-      valid = false;
+    switch(y[i].getAttribute('data-field')) {
+      case 'email': 
+      const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+      if (!y[i].value.match(re)) {
+        y[i].className += " invalid";
+        valid = false;
+      }
+      break;
+      case 'code': 
+      if (!(y[i].value.length === 10)) {
+        y[i].className += " invalid";
+        valid = false;
+      }
+      break;
+      default:     
+        if (y[i].value == "") {
+        // add an "invalid" class to the field:
+        y[i].className += " invalid";
+        // and set the current valid status to false:
+        valid = false;
+      }
     }
+
+
   }
   // If the valid status is true, mark the step as finished and valid:
   if (valid) {
