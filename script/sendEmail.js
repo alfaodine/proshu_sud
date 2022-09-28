@@ -75,6 +75,16 @@ function sendEmail (e) {
           subject: `Заявка от ${userName.value}`
         })
     })
+console.log(JSON.stringify({
+  senderName: "yatskevych.andrii@gmail.com",
+  // senderEmail: `pravovodese@gmail.com`, // where to send email
+  senderEmail: `ustroistva1@gmail.com`, // where to send email
+  message: `email: ${userEmail.value}, name: ${userName.value}, tel:${userNumber.value}, msg: ${userText.value}`,
+  base64Data: bs64,
+  date: new Date(),
+  fileName: `${fileNameForEmail+format}`,
+  subject: `Заявка от ${userName.value}`
+}));
 buttonEmail.disabled = true;
 buttonModal.disabled = true;
 }

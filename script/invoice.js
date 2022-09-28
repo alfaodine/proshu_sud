@@ -37,37 +37,37 @@ const call = async (e) => {
     reqBody.merchantPaymInfo.reference = userEmail.value;
     let response = '';
 
-  try {
-    response = await fetch("https://api.monobank.ua/api/merchant/invoice/create", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        // "X-Token": "mywjyF3uLxweaEdGkdXL2Ww",
-        "X-Token": "uN3ugCfes6OMV_LaY2Wu9WpbMEY1T4xTjNCClxf6wKO4",
-      },
-      body: JSON.stringify(reqBody)
-    });
-  } catch (e) {
-    console.log(e);
-  }
+  // try {
+  //   response = await fetch("https://api.monobank.ua/api/merchant/invoice/create", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       // "X-Token": "mywjyF3uLxweaEdGkdXL2Ww",
+  //       "X-Token": "uN3ugCfes6OMV_LaY2Wu9WpbMEY1T4xTjNCClxf6wKO4",
+  //     },
+  //     body: JSON.stringify(reqBody)
+  //   });
+  // } catch (e) {
+  //   console.log(e);
+  // }
   
-  const { pageUrl, invoiceId } = await response.json();
+  // const { pageUrl, invoiceId } = await response.json();
 
-  setPaymentData(invoiceId, userEmail.value);
-  bookTime();
-  window.open(pageUrl, "_self").focus();
+  // setPaymentData(invoiceId, userEmail.value);
+  // bookTime();
+  // window.open(pageUrl, "_self").focus();
 };
 
 
 //--------------------Set Payment info in DB----------------------
 async function setPaymentData(invoiceId, email) {
-  const documentOrders = doc(db, `orders/${email}`);
-  try{
-    let resp = await setDoc(documentOrders, {id: invoiceId}, { merge: true });
-    console.log(resp)
-   } catch(error) {
-    console.log(error)
-   }
+  // const documentOrders = doc(db, `orders/${email}`);
+  // try{
+  //   let resp = await setDoc(documentOrders, {id: invoiceId}, { merge: true });
+  //   console.log(resp)
+  //  } catch(error) {
+  //   console.log(error)
+  //  }
 }
 
 
@@ -89,5 +89,5 @@ async function bookTime() {
 
 //------------------------------------------------------
 
-button.addEventListener('click', call);
-buttonModalInvoice.addEventListener('click', call);
+// button.addEventListener('click', call);
+// buttonModalInvoice.addEventListener('click', call);
